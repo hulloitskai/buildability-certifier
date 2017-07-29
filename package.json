@@ -1,21 +1,17 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "buildability-certifier",
+  "version": "0.0.1",
+  "description": "Generates and emails certificates to users who have completed Buildability courses.",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/steven-xie/buildability-certifier",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Buildability",
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Steven Xie",
+  "license": "MIT License",
   "devDependencies": {
     "electron": "~1.6.2"
   }
