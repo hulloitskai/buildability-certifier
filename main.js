@@ -4,6 +4,7 @@ const app = electron.app
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
 
+const jquery = require('./dependencies/jquery.js')
 const path = require('path')
 const url = require('url')
 
@@ -13,7 +14,13 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({
+     width: 450, minWidth: 400, maxWidth: 550,
+     height: 600, minHeight: 530, maxHeight: 700,
+     icon: path.join(__dirname, 'production_assets/icons/png/64x64.png'),
+     titleBarStyle: 'hidden-inset',
+     backgroundColor: '#90A4AE'
+  })
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({

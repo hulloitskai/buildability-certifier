@@ -2,18 +2,41 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+    <title>Buildability Certifier</title>
 
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
+    <!--Import styling information -->
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:50,100,200,300,400,500,600,700,800|Nunito:50,100,200,300,400,500,600,700,800" rel="stylesheet"/>
+
+    <!--Import jquery from dependencies folder -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="dependencies/jquery.js"></script>
+    <script>if (window.module) module = window.module;</script>
+
+    <!--jquery code-->
+    <script>
+      $(document).ready(function(){
+         if (process.platform == 'darwin') {
+           document.getElementById('topbar').id='draggable-topbar';
+         }
+         /*$( window ).resize(function(){
+            $("#dimensions").html(
+               "<p>Window width: " + $(window).width() + "</p>" +
+               "<p>Window height: " + $(window).height() + "</p>"
+            );
+         });
+         */
+      });
+   </script>
+  </head>
+
+  <body>
+     <div id="topbar"></div>
+     <header>
+        <p class="title">CERTIFIER</p>
+     </header>
+     <div id="bottombar">
+        <p>buildABILITY</p>
+     </div>
+  </body>
 </html>
