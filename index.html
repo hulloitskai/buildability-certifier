@@ -11,22 +11,59 @@
     <!--Import jquery from dependencies folder -->
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
     <script src="dependencies/jquery.js"></script>
+    <script src="dependencies/jquery-easing.js"></script>
+    <script src="dependencies/jquery-rotate.js"></script>
+    <script src="dependencies/jquery-ui.js"></script>
+    <script src="jquery-scripts.js"></script>
     <script>if (window.module) module = window.module;</script>
 
     <!--jquery code-->
     <script>
       $(document).ready(function(){
-         if (process.platform == 'darwin') {
-           document.getElementById('topbar').id='draggable-topbar';
+         if (process.platform == 'darwin'){
+            $("#topbar").attr("id","draggable-topbar");
+         };
+         if (appStorage.get('excel-file-directory') == "no file selected"){
+            $("#no-file-selected").show();
          }
-         /*$( window ).resize(function(){
-            $("#dimensions").html(
-               "<p>Window width: " + $(window).width() + "</p>" +
-               "<p>Window height: " + $(window).height() + "</p>"
-            );
+         $("#preferences-button").click(function(){
+            showPreferences();
          });
-         */
-      });
+         $("#preferences-pane .bottom button.save").click(function(){
+            savePreferences();
+            hidePreferences();
+            if (appStorage.get('excel-file-directory') == "no file selected"){
+               $("#no-file-selected").show();
+            }
+            else{
+               $("#no-file-selected").hide();
+            }
+         });
+         $("#preferences-pane .bottom button.cancel").click(function(){
+            alert("No preferences were saved.");
+            hidePreferences();
+            if (appStorage.get('excel-file-directory') == "no file selected"){
+               $("#no-file-selected").show();
+            }
+            else{
+               $("#no-file-selected").hide();
+            }
+         });
+         $("#preferences-button").rotate({bind:{
+            mouseover: function(){
+               $(this).rotate({
+                  angle: 0,
+                  animateTo: 45
+               });
+            }
+         }});
+         $("#file-select-button").click(function(){
+            openFileSelector();
+         })
+         $("#no-file-selected button").click(function(){
+            showPreferences();
+         });
+      })
    </script>
   </head>
 
@@ -34,9 +71,88 @@
      <div id="topbar"></div>
      <header>
         <p class="title">CERTIFIER</p>
+        <img id="preferences-button" src="./production_assets/images/pref-icon.png" alt="preferences"/>
      </header>
+     <div id = "content">
+        <div id = "no-file-selected">
+           <h1>No file selected!</h1>
+           <p>Seems like there currently isn’t an Excel file selected in preferences.</p>
+           <div class="button-wrapper">
+             <button>preferences</button>
+          </div>
+        </div>
+     </div>
      <div id="bottombar">
         <p>buildABILITY</p>
+     </div>
+
+     <div id="shadowcover"></div>
+
+     <div id="preferences-pane">
+        <div class="top">
+           <div class="top-inner">
+            <p>Preferences</p>
+         </div>
+        </div>
+        <div class="body">
+           <table>
+             <tr><td>
+                <h1>Excel File</h1>
+                <p>Select Excel file to use:</p>
+                <table class="content-organizer">
+                   <tr><td>
+                     <div id = "selected-file-directory">
+                        <p>no file selected</p>
+                     </div>
+                   </td>
+                   <td>
+                      <button id="file-select-button">select</button>
+                   </td></tr>
+                </table>
+             </td></tr>
+             <tr><td>
+                <h1>Name Column</h1>
+                <p>Select the Excel column containing client names.</p>
+                <form class="dropdown-form" id="name-column-form">
+                   <img src="./production_assets/images/dropdown-arrow.png" />
+                   <select name="name-column">
+                      <option>no file selected</option>
+                   </select>
+               </form>
+               <div id="minispacer"></div>
+             </td></tr>
+             <tr><td>
+                <h1>Email Column</h1>
+                <p>Select the Excel column containing client emails.</p>
+                <form class="dropdown-form" id="email-column-form">
+                   <img src="./production_assets/images/dropdown-arrow.png" />
+                   <select name="email-column">
+                      <option>no file selected</option>
+                   </select>
+               </form>
+               <div id="minispacer"></div>
+             </td></tr>
+             <tr><td>
+                <h1>Completion Column</h1>
+                <p>Select the column to update in Excel upon succesful certificate send.</p>
+                <form class="dropdown-form" id="completion-column-form">
+                   <img src="./production_assets/images/dropdown-arrow.png" />
+                   <select name="completion-column">
+                      <option>no file selected</option>
+                   </select>
+               </form>
+               <div id="minispacer"></div>
+             </td></tr>
+           </table>
+        </div>
+        <div class="bottom">
+           <table>
+             <tr>
+                <td><button class="save">save</button></td>
+                <td><button class="cancel">cancel</button></td>
+             </tr>
+           </table>
+        </div>
      </div>
   </body>
 </html>

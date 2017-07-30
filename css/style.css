@@ -14,6 +14,17 @@ header{
    color: #CFD8DC;
 }
 
+#preferences-button{
+   cursor: pointer;
+   width: 40px;
+   height: 40px;
+   position: absolute;
+   right: 25px;
+   top: 25px;
+   -webkit-user-select: none;
+   -webkit-app-region: nodrag;
+}
+
 header .title{
    margin: 0;
    font-size: 2.25em;
@@ -42,4 +53,298 @@ header .title{
    font-size: 1em;
    font-weight: 200;
    color: #B0BEC5;
+   -webkit-user-select: none;
+   cursor: default;
+}
+
+#shadowcover{
+   background-color: black;
+   top: 0px;
+   height: 100%;
+   width: 100%;
+   display: none;
+   position: fixed;
+   opacity: 0;
+}
+
+#preferences-pane{
+   min-height: 425px;
+   height: 70%;
+   min-width: 330px;
+   width: 70%;
+   display: none;
+   position: fixed;
+   border-radius: 15px;
+   top: 1250px;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: auto;
+   background-color: #639DFF;
+}
+
+#preferences-pane .top{
+   background-color: #82B1FF;
+   margin: auto;
+   padding: 0.8em;
+   border-radius: 15px 15px 0 0;
+}
+
+#preferences-pane .top-inner{
+   margin: auto;
+   background-color: #448AFF;
+   padding: 0.35em;
+   text-align: center;
+   width: 10em;
+   border-radius: 10px;
+}
+
+#preferences-pane .top-inner p{
+   font-family: "Nunito";
+   font-weight: 300;
+   color: #E3F2FD;
+   font-size: 1.5em;
+   margin: 0;
+}
+
+#preferences-pane .bottom{
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   margin: auto;
+   position: absolute;
+   border-radius: 0 0 15px 15px;
+   background-color: #82B1FF;
+   padding: 0.83em;
+}
+
+#preferences-pane .bottom table{
+   margin: 0 auto;
+}
+
+#preferences-pane .bottom td{
+   padding: 0 5px;
+}
+
+#preferences-pane .bottom button{
+   border-radius: 10px;
+   padding: 3px 15px;
+   width: 100px;
+   border: 0;
+   color: white;
+   background-color: darkGrey;
+   font-family: "Nunito";
+   font-size: 1.1em;
+   font-weight: 300;
+   cursor: pointer;
+   transition-duration: 0.3s;
+}
+
+#preferences-pane .bottom button:focus {
+   outline:0;
+}
+
+#preferences-pane .bottom button.save{
+   background-color: #E3F2FD;
+   color: #448AFF;
+}
+
+#preferences-pane .bottom button.save:hover{
+   background-color: #99CBFE;
+}
+
+#preferences-pane .bottom button.cancel{
+   background-color: #FFEBEE;
+   color: #E57373;
+}
+
+#preferences-pane .bottom button.cancel:hover{
+   background-color: #F8BBC4;
+}
+
+#preferences-pane .body{
+   font-family: "Open Sans";
+   height: inherit;
+   overflow-y: scroll;
+}
+
+#preferences-pane .body h1{
+   margin:0;
+   font-size: 1.3em;
+   font-weight: 500;
+   color: #E3F2FD;
+}
+
+#preferences-pane .body td{
+   padding: 15px 15px 5px 15px;
+}
+
+#preferences-pane .body p{
+   margin:0;
+   font-size: 1.1em;
+   font-weight: 300;
+   color: #C9DEFF;
+}
+
+#preferences-pane .body .content-organizer{
+   left: 0;
+   right: 0;
+   width: 100%;
+   margin: auto;
+   padding: 0;
+}
+
+#preferences-pane .body .content-organizer tr{
+   margin: auto;
+   border: 0;
+   padding: 0;
+}
+
+#preferences-pane .body .content-organizer td{
+   padding: 6px 2px ;
+   margin: 0;
+   width: 100%;
+   max-width: 100px;
+}
+
+#selected-file-directory{
+   white-space: nowrap;
+   background-color: #4C81DA;
+   border-radius: 13px;
+   padding: 6.5px 5px;
+   left: 0;
+   right: 0;
+   margin: auto;
+   overflow-x: scroll;
+   text-align: center;
+   direction: rtl;
+   color: #8CB9FF;
+}
+
+#file-select-button{
+   cursor: pointer;
+   background-color: #F6F9FF;
+   color: #6399F2;
+   font-family: "Nunito";
+   font-weight: 300;
+   font-size: 1.25em;
+   padding: 5px 20px;
+   border-radius: 13px;
+   border: 0;
+   margin: 0;
+   transition-duration: 0.3s;
+}
+
+#file-select-button:focus{
+   outline:0;
+}
+
+#file-select-button:hover{
+   background-color: #C1D8FF;
+}
+
+.dropdown-form{
+   top: 6px;
+   text-align: center;
+   position: relative;
+   display: block;
+   margin: 0;
+}
+
+.dropdown-form select{
+   text-indent: 10px;
+   font-family: "Nunito";
+   color: #C0D9FB;
+   font-weight: 400;
+   overflow: hidden;
+   font-size: 1.25em;
+   padding: 5px;
+   border-radius: 10px;
+   cursor: pointer;
+   border: 0;
+   width: 100%;
+   -webkit-appearance: none;
+   background-color: #4386F8;
+   transition-duration: 0.3s;
+}
+
+.dropdown-form select:hover{
+   background-color: #3677E5;
+}
+
+.dropdown-form select:focus{
+   outline: 0;
+}
+
+.dropdown-form img{
+   position: absolute;
+   right: 12px;
+   top: 9px;
+   width: 17.5px;
+   height: 17.5px;
+}
+
+#minispacer{
+   height: 9px;
+}
+
+#no-file-selected{
+   border-radius: 15px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-left: -162.5px;
+   margin-top: -80px;
+   background-color: #78909C;
+   font-family: "Open Sans";
+   width: 325px;
+   height: 215px;
+   box-sizing: border-box;
+   padding: 25px 30px;
+   display: none;
+}
+
+#no-file-selected h1{
+   margin: 0;
+   color: #ECEFF1;
+   font-weight: 500;
+   font-size: 1.3em;
+   text-align: center;
+}
+
+#no-file-selected p{
+   margin: 7px 0px;
+   color: #CFD8DC;
+   font-weight: 200;
+   font-size: 1em;
+}
+
+.button-wrapper{
+   text-align: center;
+}
+
+#no-file-selected button{
+   position: relative;
+   top: 15px;
+   width: 150px;
+   height: 55px;
+   margin: auto;
+   border: 0;
+   border-radius: 12.5px;
+   color: #6190DE;
+   background-color: #BBDEFB;
+   font-family: "Nunito";
+   font-weight: 300;
+   cursor: pointer;
+   font-size: 1.2em;
+   transition-duration: 0.5s;
+}
+
+#no-file-selected button:hover{
+   color: #E2EDFF;
+   background-color: #539FFF;
+}
+
+#no-file-selected button:focus{
+   outline: 0;
 }
