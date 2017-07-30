@@ -4,17 +4,23 @@ const ipc = require('electron').ipcRenderer;
 var appStorage = new AppStorage();
 
 var preferencePaneActive = false;
+
 function showPreferences(){
-   $("#shadowcover").show().animate({
+   $("#shadowcover").show().delay(50).animate({
       opacity: '0.6'
+   },{
+      duration: 400,
    });
-   $("#preferences-pane").show().delay(200).animate({
+   $("#preferences-pane").show().delay(300).animate({
       top: '0'
    },{
       easing: 'easeOutElastic',
-      duration: 700
+      duration: 700,
+      complete: function(){
+         loadPreferences();
+      }
    });
-   delay(100).loadPreferences();
+   $("#preferences-pane .body").delay(50).scrollTop(0).
    preferencePaneActive = true;
 }
 
@@ -99,5 +105,34 @@ function initializeColumnOptions(){
             return $(this).text() === appStorage.get('completion-column-selected');
          }).prop('selected', true);
       }
+   });
+}
+
+function loadExcelNames(){
+   var workbook = new Excel.Workbook();
+   const excelFileDirectory = appStorage.get('excel-file-directory');
+   workbook.xlsx.readFile(excelFileDirectory).then(function(){
+      var sheetIdentity;
+      var nameColumnNumber;
+      workbook.eachSheet(function(worksheet, sheetId) {
+         worksheet.getRow(1).eachCell(function(cell, colNumber){
+            if (cell.value == appStorage.get('name-column-selected')){
+               nameColumnNumber = colNumber;
+               sheetIdentity = sheetId;
+               return
+            }
+         });
+      });
+      var worksheetWithNames = workbook.getWorksheet(sheetIdentity);
+      var arrayOfNames = [];
+      worksheetWithNames.getColumn(nameColumnNumber).eachCell(function(cell, rowNumber){
+         if (cell.value != appStorage.get('name-column-selected')){
+            if (cell.value != null){
+               arrayOfNames.push(cell.value);
+            }
+         }
+      });
+      awesomplete.list = arrayOfNames;
+      awesomplete.evaluate();
    });
 }

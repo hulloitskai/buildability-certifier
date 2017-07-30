@@ -348,3 +348,138 @@ header .title{
 #no-file-selected button:focus{
    outline: 0;
 }
+
+div .name-selection{
+}
+
+div.name-selection .top{
+   position: absolute;
+   top: 110px;
+   bottom: 115px;
+   left: 0; right: 0;
+   margin: auto;
+   width: 75%;
+   max-width: 350px;
+   background-color: #78909C;
+   border-radius: 13px;
+   padding: 0;
+}
+
+div.name-selection .top .lowbar{
+   position: absolute;
+   border-radius: 0 0 13px 13px;
+   background-color: #5A717D;
+   border: 0;
+   height: 40px;
+   width: 100%;
+   bottom: 0px;
+   text-align: center;
+}
+
+div.name-selection .top .lowbar input{
+   background-color: inherit;
+   margin-top: 8px;
+   border: 0;
+   width: 92.5%;
+   height: 60%;
+   color: #CFD8DC;
+   font-family: "Nunito";
+   font-size: 1.1em;
+   font-weight: 300;
+}
+
+div.name-selection .top .lowbar input.hidden{
+   display:none;
+}
+
+div.name-selection .top .lowbar input::-webkit-input-placeholder{
+   color: #8CA4AF;
+   font-family: "Nunito";
+   font-size: 1.1em;
+   font-weight: 300;
+   transition-duration: 0.7s
+}
+
+div.name-selection .top .lowbar input:hover::-webkit-input-placeholder{
+   transition-duration: 0.3s;
+   color: #A7BDC7;
+}
+
+div.name-selection .top .lowbar input:focus::-webkit-input-placeholder{
+   color: #5A717D;
+   transition-duration: 0.7s;
+}
+
+div.name-selection .top .lowbar input:focus{
+   outline: 0;
+}
+
+div.name-selection .top .topbar{
+   border-radius: 13px 13px 0 0;
+   background-color: #BBCFD9;
+   border: 0;
+   width: 100%;
+   text-align: center;
+   margin: 0;
+   padding: 6px 0px;
+}
+
+.name-selection .top h3{
+   font-family: "Open Sans";
+   color: #5C7F90;
+   font-weight: 500;
+   font-size: 1.2em;
+   margin: 0;
+}
+
+.name-selection .top ol{
+   position: absolute;
+   margin: 12px 0px;
+   top: 36px;
+   bottom: 29px;
+   left: 0px; right: 0px;
+   overflow-y: scroll;
+}
+
+.name-selection .top li{
+   margin-bottom: 1px;
+   color: #B8CCD5;
+   font-family: "Open Sans";
+   font-weight: 300;
+   font-size: 1.1em;
+   transition-duration: 0.3s;
+   cursor: pointer;
+}
+
+.name-selection .top li:hover{
+   color: #FD7A83;
+}
+
+.name-selection .bottom button{
+   position: absolute;
+   left: 0; right: 0; bottom: 42.5px;
+   margin: auto;
+   width: 175px;
+   height: 45px;
+   border: 0;
+   border-radius: 11px;
+   font-family: "Nunito";
+   font-size: 1.3em;
+   font-weight: 400;
+   cursor: pointer;
+   transition-duration: 0.5s;
+   transition-timing-function: ease;
+   color: #5ABB7A;
+   background: linear-gradient(to right, #82D5CA 50%, #ADEAC1 50%);
+   background-size: 200% 100%;
+   background-position: right bottom;
+}
+
+.name-selection .bottom button:hover{
+   background-position: left bottom;
+   color: #D0FFF9;
+}
+
+.name-selection .bottom button:focus{
+   outline: 0;
+}
