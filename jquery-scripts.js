@@ -151,6 +151,10 @@ var globalNameList;
 
 function certifyClients(){
    disableMainActionButton();
+    $(".name-selection .top .lowbar input").click(function(event) {
+       event.preventDefault();
+    });
+
    const clientNames = getSelectedClients();
    const workbook = new Excel.Workbook();
    workbook.xlsx.readFile(appStorage.get('excel-file-directory')).then(function(){
@@ -272,11 +276,13 @@ function makePDF(name, email, award, identifier){
    pdf.fontSize(14).fillColor("#414141").text(moment().format('LL'), -265, 492,{
       align: 'center'
    });
-   pdf.font('century-gothic').fillColor("#8C8C8C").fontSize(9).text(email,0,589.35,{
+
+   pdf.font('century-gothic').fillColor("#8C8C8C").fontSize(9).text("",0,589.35,{
       align: 'right',
       width: 315,
       height: 50
    });
+
    const date = new Date();
    var monthString;
    if ((date.getMonth() + 1) < 10){
@@ -359,59 +365,65 @@ function sendCertificateEmail(clientName, emailAddress, identifier){
 
    server.send(message, function(err, message){
       if(message){
-         $(".name-selection .top li").filter(function(){
-            return $(this).text() === clientName;
-         }).css("color","#BDEBC6");
-         if (statusStage == "start"){
-            statusStage = "1";
-            $("#bottombar").css("background-color", "#BDEBC6");
-            $("#bottombar p").css("color", "#78BF86");
-            window.setTimeout(function(){
-               $("#bottombar").css("background-color", "#37474F");
-               $("#bottombar p").css("color", "#B0BEC5");
-            }, 3500);
-            window.setTimeout(function(){
-               $("#buildability-placeholder img").removeClass("transparent");
-            }, 4000);
-         }
-         window.setTimeout(function(){
-            $(".name-selection .top li").filter(function(){
-               return $(this).text() === clientName;
-            }).css("opacity","0");
-         }, 4000);
-         window.setTimeout(function(){
-            $(".name-selection .top li").filter(function(){
-               return $(this).text() === clientName;
-            }).remove();
-         }, 4000);
+
       }
       if(err){
          $(".name-selection .top li").filter(function(){
             return $(this).text() === clientName;
          }).css("color","#E07F7F");
          if (statusStage == "start"){
-            statusStage = "1";
+            statusStage = "end";
             $("#bottombar").css("background-color", "#E07F7F");
             $("#bottombar p").css("color", "#966565");
             window.setTimeout(function(){
                $("#bottombar").css("background-color", "#37474F");
                $("#bottombar p").css("color", "#B0BEC5");
-            }, 3500);
+               $(".name-selection .top .lowbar input").prop('onclick',null).off('click');
+            }, 2500);
             window.setTimeout(function(){
                $("#buildability-placeholder img").removeClass("transparent");
-            }, 4000);
+            }, 3000);
          }
          window.setTimeout(function(){
             $(".name-selection .top li").filter(function(){
                return $(this).text() === clientName;
             }).css("opacity","0");
-         }, 4000);
+         }, 3000);
          window.setTimeout(function(){
             $(".name-selection .top li").filter(function(){
                return $(this).text() === clientName;
             }).remove();
-         }, 4000);
-         alert("An error occured: " + err);
+         }, 3000);
+         alert(err);
+      }
+      else{
+         $(".name-selection .top li").filter(function(){
+            return $(this).text() === clientName;
+         }).css("color","#BDEBC6");
+         if (statusStage == "start"){
+            statusStage = "end";
+            $("#bottombar").css("background-color", "#BDEBC6");
+            $("#bottombar p").css("color", "#78BF86");
+            window.setTimeout(function(){
+               $("#bottombar").css("background-color", "#37474F");
+               $("#bottombar p").css("color", "#B0BEC5");
+               $(".name-selection .top .lowbar input").prop('onclick',null).off('click');
+            }, 2500);
+            window.setTimeout(function(){
+               $("#buildability-placeholder img").removeClass("transparent");
+            }, 3000);
+         }
+         window.setTimeout(function(){
+            $(".name-selection .top li").filter(function(){
+               return $(this).text() === clientName;
+            }).css("opacity","0");
+         }, 3000);
+         window.setTimeout(function(){
+            $(".name-selection .top li").filter(function(){
+               return $(this).text() === clientName;
+            }).remove();
+         }, 3000);
+         updateExcelCompletionStatus(clientName);
       }
    });
 }
@@ -422,6 +434,7 @@ function enableMainActionButton(){
    mainActivityButtonEnabled = true;
    $(".name-selection .bottom button").removeClass("button-disabled");
    $(".name-selection .bottom button").click(function(){
+      $(".name-selection .top li").css("color","#A3CEF2");
       $(".name-selection .top li").css("cursor","default");
       $(".name-selection .top li").css("transition-duration","0.5s");
       $(".name-selection .top li").prop('onclick',null).off('click');
@@ -434,3 +447,74 @@ function disableMainActionButton(){
    $(".name-selection .bottom button").addClass("button-disabled");
    $(".name-selection .bottom button").prop('onclick',null).off('click');
 }
+
+function updateExcelCompletionStatus(clientName){
+   const workbook = new Excel.Workbook();
+   workbook.xlsx.readFile(appStorage.get('excel-file-directory')).then(function(){
+      var nameSheetID;
+      var nameColumnNumber;
+      var completionRowNumber;
+      var completionSheetNumber;;
+      var completionColumnNumber;
+
+      workbook.eachSheet(function(worksheet, sheetId){
+         worksheet.getRow(1).eachCell(function(cell, colNumber){
+            if (cell.value == appStorage.get('name-column-selected')){
+               nameColumnNumber = colNumber;
+               nameSheetID = worksheet.name;
+               worksheet.getColumn(nameColumnNumber).eachCell(function(cell, rowNumber){
+                  if (cell.value == clientName){
+                     completionRowNumber = rowNumber;
+                  }
+               })
+            }
+            else if (cell.value == appStorage.get('completion-column-selected')) {
+               completionColumnNumber = colNumber;
+               completionSheetNumber = sheetId;
+            }
+         });
+      });
+
+      const targetRow = workbook.getWorksheet(completionSheetNumber).getRow(completionRowNumber)
+      targetRow.getCell(completionColumnNumber).value = "true";
+      targetRow.commit();
+      return workbook.xlsx.writeFile(appStorage.get('excel-file-directory'));
+
+      /*
+      const excelplus = new ExcelPlus();
+      fs.readFile(appStorage.get('excel-file-directory'), (err, filedata) => {
+         if(err){
+            alert("Error: " + err);
+         }
+         if(filedata){
+            alert(typeof filedata);
+         }
+      });
+      excelplus.openRemote(appStorage.get('excel-file-directory'), function(passed){
+         if (!passed){
+            alert("Error: impossible to load the remote file.");
+         }
+         else{
+            alert('ok');
+            alert(ep.selectSheet(1).readAll()) // show the content of the first sheet
+         }
+      });
+      */
+   });
+}
+
+/*
+function convertToLetterFormat(number){
+   if (typeof number == "string"){
+      number = Number(number);
+   }
+   const numberOfZs = Math.floor(number/26)
+   var output = "";
+   for (i = 0; i < numberOfZs; i++) {
+      output += "Z";
+   }
+   const remainingLetterNumber = number - (numberOfZs * 26);
+   output += String.fromCharCode(64 + remainingLetterNumber);
+   return output;
+}
+*/
