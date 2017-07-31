@@ -69,14 +69,25 @@
             showPreferences();
          });
          $(".name-selection .top .lowbar form").bind('submit',function(){
-            if ($(".name-selection .top .lowbar input:text").val() != ''){
-               $(".name-selection .top ol").append("<li>" + $(".name-selection .top .lowbar input:text").val() + "</li>");
-               $(".name-selection .top .lowbar input:text").val('');
+            var lastClientName;
+            if ($(".name-selection .top .lowbar #name-input-field").val() != ''){
+               lastClientName = $(".name-selection .top .lowbar #name-input-field").val();
+               if (arrayContainsValue(globalNameList, lastClientName)){
+                  $(".name-selection .top .lowbar #name-input-field").val('');
+                  $(".name-selection .top ol").append("<li>" + lastClientName + "</li>");
+               }
             }
-            $(".name-selection .top li").click(function(){
+
+            $(".name-selection .top li").filter(function(){
+               return $(this).text() === lastClientName;
+            }).click(function(){
                $(this).remove();
             });
+
             return false;
+         });
+         $(".name-selection .bottom button").click(function(){
+            certifyClients();
          });
       })
    </script>
@@ -101,7 +112,7 @@
              <div class="topbar">
                 <h3>Clients to certify:</h3>
              </div>
-             <ol>
+             <ol id = "selected-client-names-list">
              </ol>
              <div class = "lowbar">
                 <form>
@@ -160,6 +171,28 @@
                 <form class="dropdown-form" id="email-column-form">
                    <img src="./production_assets/images/dropdown-arrow.png" />
                    <select name="email-column">
+                      <option>no file selected</option>
+                   </select>
+               </form>
+               <div id="minispacer"></div>
+             </td></tr>
+             <tr><td>
+                <h1>Award Column</h1>
+                <p>Select the Excel column containing award name.</p>
+                <form class="dropdown-form" id="award-column-form">
+                   <img src="./production_assets/images/dropdown-arrow.png" />
+                   <select name="award-column">
+                      <option>no file selected</option>
+                   </select>
+               </form>
+               <div id="minispacer"></div>
+             </td></tr>
+             <tr><td>
+                <h1>Certificate Identifier</h1>
+                <p>Select the Excel column containing the certificate identifier number.</p>
+                <form class="dropdown-form" id="identifier-column-form">
+                   <img src="./production_assets/images/dropdown-arrow.png" />
+                   <select name="identifier-column">
                       <option>no file selected</option>
                    </select>
                </form>
