@@ -81,13 +81,19 @@
             $(".name-selection .top li").filter(function(){
                return $(this).text() === lastClientName;
             }).click(function(){
+               if (mainActivityButtonEnabled == true){
+                  $("#buildability-placeholder img").removeClass("transparent")
+                  disableMainActionButton();
+               }
                $(this).remove();
             });
 
+            if (mainActivityButtonEnabled == false){
+               $("#buildability-placeholder img").addClass("transparent");
+               enableMainActionButton();
+            }
+
             return false;
-         });
-         $(".name-selection .bottom button").click(function(){
-            certifyClients();
          });
       })
    </script>
@@ -112,6 +118,9 @@
              <div class="topbar">
                 <h3>Clients to certify:</h3>
              </div>
+             <div id="buildability-placeholder">
+                <img src="./production_assets/images/buildability-logo.png" />
+             </div>
              <ol id = "selected-client-names-list">
              </ol>
              <div class = "lowbar">
@@ -122,7 +131,7 @@
              </div>
            </div>
            <div class = "bottom">
-             <button>Certify</button>
+             <button class ="button-disabled">Certify</button>
            </div>
         </div>
      </div>

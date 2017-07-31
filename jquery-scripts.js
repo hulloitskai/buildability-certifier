@@ -150,6 +150,7 @@ var awesomplete;
 var globalNameList;
 
 function certifyClients(){
+   disableMainActionButton();
    const clientNames = getSelectedClients();
    const workbook = new Excel.Workbook();
    workbook.xlsx.readFile(appStorage.get('excel-file-directory')).then(function(){
@@ -231,11 +232,17 @@ function certifyClients(){
          });
       });
 
+      $("#bottombar").css("background-color", "#EACD81");
+      $("#bottombar p").css("color", "#998C48");
+
+      statusStage = "start";
       arrayOfCertificateDocuments.forEach(function(specifications, index){
          makePDF(specifications.name, specifications.email, specifications.award, specifications.identifier);
       });
    });
 }
+
+var statusStage;
 
 const PDFDocument = require('pdfkit');
 const moment = require('moment');
@@ -295,6 +302,7 @@ function makePDF(name, email, award, identifier){
       height: 50
    });
    pdf.end();
+   sendCertificateEmail(name, email, identifier);
 }
 
 function searchAndRemoveFromArray(array, value){
@@ -324,4 +332,105 @@ function arrayContainsValue(array, value){
       }
    });
    return arrayDoesIndeedContainTheAforementionedValue;
+}
+
+emailjs = require('emailjs');
+function sendCertificateEmail(clientName, emailAddress, identifier){
+   const server= emailjs.server.connect({
+      user: "steven.xie@genuinebusiness.ca",
+      password: "intracomuv1",
+      host: "smtp.zoho.com",
+      ssl: true,
+      port: 465,
+      timeout: 15000
+   });
+
+   var message	= {
+      from: "Steven Xie <steven.xie@genuinebusiness.ca>",
+      to: clientName + " <" + emailAddress + ">",
+      subject:	"Congratulations on completing your course at Buildability!",
+      text: "Congratulations on completing your course at buildability. \nPlease find your certificate attached to this email.",
+      attachment:
+      [
+         {data:"<html><h3>Congratulations!</h3><br /><p>Please find your certificate attached to this email.</p></html>", alternative:true},
+         {path:"generated-content/" + identifier + ".pdf", type:"application/pdf", name: identifier +".pdf"}
+      ]
+   }
+
+   server.send(message, function(err, message){
+      if(message){
+         $(".name-selection .top li").filter(function(){
+            return $(this).text() === clientName;
+         }).css("color","#BDEBC6");
+         if (statusStage == "start"){
+            statusStage = "1";
+            $("#bottombar").css("background-color", "#BDEBC6");
+            $("#bottombar p").css("color", "#78BF86");
+            window.setTimeout(function(){
+               $("#bottombar").css("background-color", "#37474F");
+               $("#bottombar p").css("color", "#B0BEC5");
+            }, 3500);
+            window.setTimeout(function(){
+               $("#buildability-placeholder img").removeClass("transparent");
+            }, 4000);
+         }
+         window.setTimeout(function(){
+            $(".name-selection .top li").filter(function(){
+               return $(this).text() === clientName;
+            }).css("opacity","0");
+         }, 4000);
+         window.setTimeout(function(){
+            $(".name-selection .top li").filter(function(){
+               return $(this).text() === clientName;
+            }).remove();
+         }, 4000);
+      }
+      if(err){
+         $(".name-selection .top li").filter(function(){
+            return $(this).text() === clientName;
+         }).css("color","#E07F7F");
+         if (statusStage == "start"){
+            statusStage = "1";
+            $("#bottombar").css("background-color", "#E07F7F");
+            $("#bottombar p").css("color", "#966565");
+            window.setTimeout(function(){
+               $("#bottombar").css("background-color", "#37474F");
+               $("#bottombar p").css("color", "#B0BEC5");
+            }, 3500);
+            window.setTimeout(function(){
+               $("#buildability-placeholder img").removeClass("transparent");
+            }, 4000);
+         }
+         window.setTimeout(function(){
+            $(".name-selection .top li").filter(function(){
+               return $(this).text() === clientName;
+            }).css("opacity","0");
+         }, 4000);
+         window.setTimeout(function(){
+            $(".name-selection .top li").filter(function(){
+               return $(this).text() === clientName;
+            }).remove();
+         }, 4000);
+         alert("An error occured: " + err);
+      }
+   });
+}
+
+var mainActivityButtonEnabled = false;
+
+function enableMainActionButton(){
+   mainActivityButtonEnabled = true;
+   $(".name-selection .bottom button").removeClass("button-disabled");
+   $(".name-selection .bottom button").click(function(){
+      $(".name-selection .top li").css("cursor","default");
+      $(".name-selection .top li").css("transition-duration","0.5s");
+      $(".name-selection .top li").prop('onclick',null).off('click');
+      certifyClients();
+   });
+}
+
+function disableMainActionButton(){
+   mainActivityButtonEnabled = false;
+   $(".name-selection .bottom button").addClass("button-disabled");
+   $(".name-selection .bottom button").prop('onclick',null).off('click');
 }

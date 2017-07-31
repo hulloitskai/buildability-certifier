@@ -43,15 +43,19 @@ header .title{
    position: fixed;
    bottom: 0px;
    width: 100%;
-   background-color: #37474F;
    text-align: center;
    padding: 0.2em;
+   transition-duration: 1s;
+   transition-timing-function: ease-in-out;
+   background-color: #37474F;
 }
 
 #bottombar p{
    margin: auto;
    font-size: 1em;
    font-weight: 200;
+   transition-duration: 1s;
+   transition-timing-function: ease-in-out;
    color: #B0BEC5;
    -webkit-user-select: none;
    cursor: default;
@@ -442,11 +446,12 @@ div.name-selection .top .topbar{
 }
 
 .name-selection .top li{
+   margin-top: 5px;
    margin-bottom: 1px;
-   color: #B8CCD5;
+   color: #A3CEF2;
    font-family: "Open Sans";
    font-weight: 400;
-   font-size: 1.1em;
+   font-size: 1.15em;
    transition-duration: 0.3s;
    cursor: pointer;
 }
@@ -470,16 +475,41 @@ div.name-selection .top .topbar{
    transition-duration: 0.5s;
    transition-timing-function: ease;
    color: #5ABB7A;
-   background: linear-gradient(to right, #82D5CA 50%, #ADEAC1 50%);
-   background-size: 200% 100%;
-   background-position: right bottom;
+   background-color: #ADEAC1;
 }
 
 .name-selection .bottom button:hover{
-   background-position: left bottom;
+   background-color: #82D5CA;
    color: #D0FFF9;
 }
 
 .name-selection .bottom button:focus{
    outline: 0;
+}
+
+.name-selection .bottom button.button-disabled{
+   background-color: #98CBA9;
+   color: #7BB18D;
+   cursor: default;
+}
+
+.action-done{
+   color: #9FF5B0;
+}
+
+#buildability-placeholder img{
+   position: absolute;
+   top: 0;
+   left: 0; right: 0;
+   bottom: 0;
+   opacity: 0.1;
+   width: 175px;
+   height: 175px;
+   margin: auto;
+   border-radius: 8px;
+   transition-duration: 0.75s;
+}
+
+#buildability-placeholder img.transparent{
+   opacity:0;
 }
