@@ -51,8 +51,9 @@
             }
          });
          $("#preferences-pane .bottom button.cancel").click(function(){
-            alert("No preferences were saved.");
-            hidePreferences()
+            if(confirm("Continue without saving preferences?")){
+               hidePreferences();
+            }
          });
          $("#preferences-button").rotate({bind:{
             mouseover: function(){
