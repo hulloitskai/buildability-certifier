@@ -364,26 +364,11 @@ function sendCertificateEmail(clientName, emailAddress, identifier){
    }
 
    server.send(message, function(err, message){
-      if(message){
-
-      }
       if(err){
+         $(".name-selection .top li").css("transition-duration","1s")
          $(".name-selection .top li").filter(function(){
             return $(this).text() === clientName;
          }).css("color","#E07F7F");
-         if (statusStage == "start"){
-            statusStage = "end";
-            $("#bottombar").css("background-color", "#E07F7F");
-            $("#bottombar p").css("color", "#966565");
-            window.setTimeout(function(){
-               $("#bottombar").css("background-color", "#37474F");
-               $("#bottombar p").css("color", "#B0BEC5");
-               $(".name-selection .top .lowbar input").prop('onclick',null).off('click');
-            }, 2500);
-            window.setTimeout(function(){
-               $("#buildability-placeholder img").removeClass("transparent");
-            }, 3000);
-         }
          window.setTimeout(function(){
             $(".name-selection .top li").filter(function(){
                return $(this).text() === clientName;
@@ -393,8 +378,21 @@ function sendCertificateEmail(clientName, emailAddress, identifier){
             $(".name-selection .top li").filter(function(){
                return $(this).text() === clientName;
             }).remove();
-         }, 3000);
-         alert(err);
+         }, 3500);
+         if (statusStage == "start"){
+            statusStage = "end";
+            $("#bottombar").css("background-color", "#E07F7F");
+            $("#bottombar p").css("color", "#966565");
+            window.setTimeout(function(){
+               $("#bottombar").css("background-color", "#37474F");
+               $("#bottombar p").css("color", "#B0BEC5");
+               $(".name-selection .top .lowbar input").prop('onclick',null).off('click');
+            }, 3000);
+            window.setTimeout(function(){
+               $("#buildability-placeholder img").removeClass("transparent");
+            }, 3500);
+            alert(err);
+         }
       }
       else{
          $(".name-selection .top li").filter(function(){
@@ -417,7 +415,7 @@ function sendCertificateEmail(clientName, emailAddress, identifier){
             $(".name-selection .top li").filter(function(){
                return $(this).text() === clientName;
             }).css("opacity","0");
-         }, 3000);
+         }, 2500);
          window.setTimeout(function(){
             $(".name-selection .top li").filter(function(){
                return $(this).text() === clientName;
@@ -480,41 +478,5 @@ function updateExcelCompletionStatus(clientName){
       targetRow.commit();
       return workbook.xlsx.writeFile(appStorage.get('excel-file-directory'));
 
-      /*
-      const excelplus = new ExcelPlus();
-      fs.readFile(appStorage.get('excel-file-directory'), (err, filedata) => {
-         if(err){
-            alert("Error: " + err);
-         }
-         if(filedata){
-            alert(typeof filedata);
-         }
-      });
-      excelplus.openRemote(appStorage.get('excel-file-directory'), function(passed){
-         if (!passed){
-            alert("Error: impossible to load the remote file.");
-         }
-         else{
-            alert('ok');
-            alert(ep.selectSheet(1).readAll()) // show the content of the first sheet
-         }
-      });
-      */
    });
 }
-
-/*
-function convertToLetterFormat(number){
-   if (typeof number == "string"){
-      number = Number(number);
-   }
-   const numberOfZs = Math.floor(number/26)
-   var output = "";
-   for (i = 0; i < numberOfZs; i++) {
-      output += "Z";
-   }
-   const remainingLetterNumber = number - (numberOfZs * 26);
-   output += String.fromCharCode(64 + remainingLetterNumber);
-   return output;
-}
-*/

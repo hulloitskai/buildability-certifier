@@ -68,21 +68,24 @@
          $("#no-file-selected button").click(function(){
             showPreferences();
          });
+
          $(".name-selection .top .lowbar form").bind('submit',function(){
             var lastClientName;
             if ($(".name-selection .top .lowbar #name-input-field").val() != ''){
                lastClientName = $(".name-selection .top .lowbar #name-input-field").val();
                if (arrayContainsValue(globalNameList, lastClientName)){
                   $(".name-selection .top .lowbar #name-input-field").val('');
-                  $(".name-selection .top ol").append("<li>" + lastClientName + "</li>");
+                  if (arrayContainsValue(getSelectedClients(), lastClientName) != true){
+                     $(".name-selection .top ol").append("<li>" + lastClientName + "</li>");
+                  }
                }
             }
 
             $(".name-selection .top li").filter(function(){
                return $(this).text() === lastClientName;
             }).click(function(){
-               if (mainActivityButtonEnabled == true){
-                  $("#buildability-placeholder img").removeClass("transparent")
+               if ((mainActivityButtonEnabled == true) && (getSelectedClients().length == 1)){
+                  $("#buildability-placeholder img").removeClass("transparent");
                   disableMainActionButton();
                }
                $(this).remove();
@@ -110,7 +113,7 @@
            <h1>No file selected!</h1>
            <p>Seems like there currently isn’t an Excel file selected in preferences.</p>
            <div class="button-wrapper">
-             <button>preferences</button>
+             <button>settings</button>
           </div>
         </div>
         <div class = "name-selection">
@@ -144,7 +147,7 @@
      <div id="preferences-pane">
         <div class="top">
            <div class="top-inner">
-            <p>Preferences</p>
+            <p>Settings</p>
          </div>
         </div>
         <div class="body">

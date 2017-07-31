@@ -454,6 +454,7 @@ div.name-selection .top .topbar{
    font-size: 1.15em;
    transition-duration: 0.3s;
    cursor: pointer;
+   transition-timing-function: ease-in-out;
 }
 
 .name-selection .top li:hover{
