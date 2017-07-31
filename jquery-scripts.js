@@ -242,30 +242,12 @@ const moment = require('moment');
 const fs = require('fs');
 
 function makePDF(name, email, award, identifier){
-   const date = new Date();
-   var monthString;
-   if ((date.getMonth() + 1) < 10){
-      monthString = "0" + (date.getMonth() + 1).toString();
-   }
-   else{
-      monthString = (date.getMonth() + 1).toString();
-   }
-
-   var dateString;
-   if ((date.getDate() + 1) < 10){
-      dateString = "0" + (date.getDate() + 1).toString();
-   }
-   else{
-      dateString = (date.getDate() + 1).toString();
-   }
-
-   const fullIdentifier = date.getFullYear().toString() + monthString + dateString + "-" + identifier;
 
    const pdf = new PDFDocument({
       autoFirstPage: false
    });
 
-   pdf.pipe(fs.createWriteStream("generated-content/" + fullIdentifier + ".pdf"));
+   pdf.pipe(fs.createWriteStream("generated-content/" + identifier + ".pdf"));
    pdf.addPage({
     layout: "landscape"
    });
@@ -288,6 +270,25 @@ function makePDF(name, email, award, identifier){
       width: 315,
       height: 50
    });
+   const date = new Date();
+   var monthString;
+   if ((date.getMonth() + 1) < 10){
+      monthString = "0" + (date.getMonth() + 1).toString();
+   }
+   else{
+      monthString = (date.getMonth() + 1).toString();
+   }
+
+   var dateString;
+   if ((date.getDate() + 1) < 10){
+      dateString = "0" + (date.getDate() + 1).toString();
+   }
+   else{
+      dateString = (date.getDate() + 1).toString();
+   }
+
+   const fullIdentifier = date.getFullYear().toString() + monthString + dateString + "-" + identifier;
+
    pdf.fillColor("#8C8C8C").text(fullIdentifier,420,589.35,{
       align: 'left',
       width: 315,
