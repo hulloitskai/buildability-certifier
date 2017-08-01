@@ -55,6 +55,10 @@ function loadPreferences(){
       $("#selected-file-directory p").text("no file selected");
       $(".dropdown-form select").replaceWith("<select><option>no file selected</option></select>");
    }
+
+   if (appStorage.has('certificate-input-date')){
+      $(".preferences-input-section #date-input-field").val(appStorage.get('certificate-input-date'));
+   }
 }
 
 function savePreferences(){
@@ -64,6 +68,19 @@ function savePreferences(){
    appStorage.set('award-column-selected', $("#award-column-form select").find(":selected").text());
    appStorage.set('identifier-column-selected', $("#identifier-column-form select").find(":selected").text());
    appStorage.set('completion-column-selected', $("#completion-column-form select").find(":selected").text());
+   if($(".preferences-input-section #date-input-field").val() != ''){
+      appStorage.set('certificate-input-date', $(".preferences-input-section #date-input-field").val());
+   }
+}
+
+function preferencesAreValid(){
+   if(moment($(".preferences-input-section #date-input-field").val()).isValid() == false){
+      alert("Warning: Certificate date input is invalid. (Doesn't follow specified format).");
+      return false;
+   }
+   else{
+      return true;
+   }
 }
 
 function openFileSelector(){
@@ -253,7 +270,7 @@ const moment = require('moment');
 const fs = require('fs');
 
 function makePDF(name, email, award, identifier){
-
+   console.log("Begin make-pdf for: " + identifier);
    const pdf = new PDFDocument({
       autoFirstPage: false
    });
@@ -273,7 +290,9 @@ function makePDF(name, email, award, identifier){
    pdf.fillColor("#414141").fontSize(22).text(award,13,369,{
       align: 'center'
    });
-   pdf.fontSize(14).fillColor("#414141").text(moment().format('LL'), -265, 492,{
+
+   const certificateDate = moment(appStorage.get('certificate-input-date'));
+   pdf.fontSize(14).fillColor("#414141").text(certificateDate.format('LL'), -265, 492,{
       align: 'center'
    });
 
@@ -283,31 +302,15 @@ function makePDF(name, email, award, identifier){
       height: 50
    });
 
-   const date = new Date();
-   var monthString;
-   if ((date.getMonth() + 1) < 10){
-      monthString = "0" + (date.getMonth() + 1).toString();
-   }
-   else{
-      monthString = (date.getMonth() + 1).toString();
-   }
-
-   var dateString;
-   if ((date.getDate() + 1) < 10){
-      dateString = "0" + (date.getDate() + 1).toString();
-   }
-   else{
-      dateString = (date.getDate() + 1).toString();
-   }
-
-   const fullIdentifier = date.getFullYear().toString() + monthString + dateString + "-" + identifier;
-
+   const fullIdentifier = certificateDate.format("YYYYMMDD") + "-" + identifier;
    pdf.fillColor("#8C8C8C").text(fullIdentifier,420,589.35,{
       align: 'left',
       width: 315,
       height: 50
    });
    pdf.end();
+
+   console.log("Done make-pdf for: " + identifier);
    sendCertificateEmail(name, email, identifier);
 }
 
@@ -342,17 +345,19 @@ function arrayContainsValue(array, value){
 
 emailjs = require('emailjs');
 function sendCertificateEmail(clientName, emailAddress, identifier){
+   console.log("Begin send-email for: " + identifier);
+
    const server= emailjs.server.connect({
-      user: "steven.xie@genuinebusiness.ca",
+      user: "testaccount@genuinebusiness.ca",
       password: "intracomuv1",
       host: "smtp.zoho.com",
       ssl: true,
       port: 465,
-      timeout: 15000
+      timeout: 20000
    });
 
    var message	= {
-      from: "Steven Xie <steven.xie@genuinebusiness.ca>",
+      from: "<testaccount@genuinebusiness.ca>",
       to: clientName + " <" + emailAddress + ">",
       subject:	"Congratulations on completing your course at Buildability!",
       text: "Congratulations on completing your course at buildability. \nPlease find your certificate attached to this email.",
@@ -365,6 +370,7 @@ function sendCertificateEmail(clientName, emailAddress, identifier){
 
    server.send(message, function(err, message){
       if(err){
+         console.log("send-email ERRORED for " + identifier);
          $(".name-selection .top li").css("transition-duration","1s")
          $(".name-selection .top li").filter(function(){
             return $(this).text() === clientName;
@@ -373,12 +379,12 @@ function sendCertificateEmail(clientName, emailAddress, identifier){
             $(".name-selection .top li").filter(function(){
                return $(this).text() === clientName;
             }).css("opacity","0");
-         }, 3000);
+         }, 2500);
          window.setTimeout(function(){
             $(".name-selection .top li").filter(function(){
                return $(this).text() === clientName;
             }).remove();
-         }, 3500);
+         }, 3000);
          if (statusStage == "start"){
             statusStage = "end";
             $("#bottombar").css("background-color", "#E07F7F");
@@ -387,14 +393,17 @@ function sendCertificateEmail(clientName, emailAddress, identifier){
                $("#bottombar").css("background-color", "#37474F");
                $("#bottombar p").css("color", "#B0BEC5");
                $(".name-selection .top .lowbar input").prop('onclick',null).off('click');
-            }, 3000);
+               $("#select-all-client-names-cancel").hide().css("opacity","1");
+            }, 2500);
             window.setTimeout(function(){
                $("#buildability-placeholder img").removeClass("transparent");
-            }, 3500);
+               $("#select-all-client-names-button").show().css("opacity","1");
+            }, 3000);
             alert(err);
          }
       }
       else{
+         console.log("email-send successful for " + identifier);
          $(".name-selection .top li").filter(function(){
             return $(this).text() === clientName;
          }).css("color","#BDEBC6");
@@ -406,9 +415,11 @@ function sendCertificateEmail(clientName, emailAddress, identifier){
                $("#bottombar").css("background-color", "#37474F");
                $("#bottombar p").css("color", "#B0BEC5");
                $(".name-selection .top .lowbar input").prop('onclick',null).off('click');
+               $("#select-all-client-names-cancel").hide().css("opacity","1");
             }, 2500);
             window.setTimeout(function(){
                $("#buildability-placeholder img").removeClass("transparent");
+               $("#select-all-client-names-button").show().css("opacity","1");
             }, 3000);
          }
          window.setTimeout(function(){
@@ -436,6 +447,8 @@ function enableMainActionButton(){
       $(".name-selection .top li").css("cursor","default");
       $(".name-selection .top li").css("transition-duration","0.5s");
       $(".name-selection .top li").prop('onclick',null).off('click');
+      $("#select-all-client-names-cancel").css("opacity","0");
+      $("#select-all-client-names-button").css("opacity","0");
       certifyClients();
    });
 }

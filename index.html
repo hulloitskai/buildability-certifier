@@ -38,8 +38,10 @@
             showPreferences();
          });
          $("#preferences-pane .bottom button.save").click(function(){
-            savePreferences();
-            hidePreferences();
+            if (preferencesAreValid()){
+               savePreferences();
+               hidePreferences();
+            }
             if (appStorage.get('excel-file-directory') == "no file selected"){
                $("#no-file-selected").show();
                $("div.name-selection").hide();
@@ -78,6 +80,10 @@
                   $(".name-selection .top .lowbar #name-input-field").val('');
                   if (arrayContainsValue(getSelectedClients(), lastClientName) != true){
                      $(".name-selection .top ol").append("<li>" + lastClientName + "</li>");
+                     if (mainActivityButtonEnabled == false){
+                        $("#buildability-placeholder img").addClass("transparent");
+                        enableMainActionButton();
+                     }
                   }
                }
             }
@@ -88,16 +94,45 @@
                if ((mainActivityButtonEnabled == true) && (getSelectedClients().length == 1)){
                   $("#buildability-placeholder img").removeClass("transparent");
                   disableMainActionButton();
+                  $("#select-all-client-names-cancel").hide();
+                  $("#select-all-client-names-button").show();
                }
                $(this).remove();
             });
 
-            if (mainActivityButtonEnabled == false){
-               $("#buildability-placeholder img").addClass("transparent");
-               enableMainActionButton();
-            }
-
             return false;
+         });
+         $("#select-all-client-names-button").click(function(){
+            $(this).hide();
+            $("#select-all-client-names-cancel").show();
+            $(".name-selection .top li").prop('onclick',null).off('click').remove();
+            globalNameList.forEach(function(name, index){
+               $(".name-selection .top ol").append("<li>" + name + "</li>");
+               $(".name-selection .top li").filter(function(){
+                  return $(this).text() === name;
+               }).click(function(){
+                  if ((mainActivityButtonEnabled == true) && (getSelectedClients().length == 1)){
+                     $("#buildability-placeholder img").removeClass("transparent");
+                     disableMainActionButton();
+                     $("#select-all-client-names-cancel").hide();
+                     $("#select-all-client-names-button").show();
+                  }
+                  $(this).remove();
+               });
+               if (mainActivityButtonEnabled == false){
+                  $("#buildability-placeholder img").addClass("transparent");
+                  enableMainActionButton();
+               }
+            });
+         });
+         $("#select-all-client-names-cancel").click(function(){
+            $(this).hide();
+            $("#select-all-client-names-button").show();
+            $(".name-selection .top li").prop('onclick',null).off('click').remove();
+            if ((mainActivityButtonEnabled == true) && (getSelectedClients().length == 0)){
+               $("#buildability-placeholder img").removeClass("transparent");
+               disableMainActionButton();
+            }
          });
       })
    </script>
@@ -132,6 +167,10 @@
                    <input type="text" id="name-input-field" placeholder="Enter client names here."/>
                    <input class = "hidden" type="submit"/>
                 </form>
+                <div class="button-wrapper">
+                   <button id="select-all-client-names-button">all</button>
+                   <button id="select-all-client-names-cancel">X</button>
+                </div>
              </div>
            </div>
            <div class = "bottom">
@@ -210,6 +249,14 @@
                    </select>
                </form>
                <div id="minispacer"></div>
+             </td></tr>
+             <tr><td>
+                <h1>Certificate Date</h1>
+                <p>Enter the date that will appear on the certificate.</p>
+                <form class="preferences-input-section" id="date-input-wrapper">
+                   <input type="text" id="date-input-field" placeholder="yyyy-mm-dd"/>
+               </form>
+                <div id="minispacer"></div>
              </td></tr>
              <tr><td>
                 <h1>Completion Column</h1>

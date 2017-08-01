@@ -12,7 +12,7 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-     width: 450, minWidth: 400, maxWidth: 550,
+     width: 425, minWidth: 400, maxWidth: 550,
      height: 600, minHeight: 530, maxHeight: 700,
      icon: path.join(__dirname, 'production_assets/icons/png/64x64.png'),
      titleBarStyle: 'hidden-inset',
@@ -27,7 +27,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

@@ -455,6 +455,7 @@ div.name-selection .top .topbar{
    transition-duration: 0.3s;
    cursor: pointer;
    transition-timing-function: ease-in-out;
+   -webkit-user-select: none;
 }
 
 .name-selection .top li:hover{
@@ -513,4 +514,108 @@ div.name-selection .top .topbar{
 
 #buildability-placeholder img.transparent{
    opacity:0;
+}
+
+#select-all-client-names-button{
+   position: absolute;
+   width: 50px;
+   height: 27.5px;
+   right: 10px;
+   bottom: 6.5px;
+   border: 0;
+   border-radius: 7px;
+   background-color: #BBDEFB;
+   color: #6190DE;
+   transition-duration: 0.4s;
+   transition-timing-function: ease-in-out;
+   font-family: "Nunito";
+   font-size: 1.1em;
+   font-weight: 300;
+   cursor: pointer;
+   border: 0px;
+}
+
+#select-all-client-names-button:focus{
+   outline: 0;
+}
+
+#select-all-client-names-button:hover{
+   background-color: #739ADC;
+   color:white;
+}
+
+#select-all-client-names-cancel{
+   position: absolute;
+   width: 50px;
+   height: 27.5px;
+   right: 10px;
+   bottom: 6.5px;
+   border: 0;
+   border-radius: 7px;
+   background-color: #FFABAB;
+   color: #CF7272;
+   transition-duration: 0.4s;
+   transition-timing-function: ease-in-out;
+   font-family: "Nunito";
+   font-size: 1.1em;
+   font-weight: 300;
+   cursor: pointer;
+   border: 0px;
+   display: none;
+}
+
+#select-all-client-names-cancel:focus{
+   outline: 0;
+}
+
+#select-all-client-names-cancel:hover{
+   background-color: #FA7676;
+   color: #FFC8C8;
+}
+
+.preferences-input-section{
+   text-align: center;
+}
+
+.preferences-input-section input{
+   width: 100%;
+   height: 35px;
+   border: 0px;
+   border-radius: 7.5px;
+   margin: 7.5px 0 0 0 ;
+   overflow-x: scroll;
+   background-color: #4386F8;
+   color: #C0D9FB;
+   transition-duration: 0.4s;
+   text-indent: 10px;
+   font-family: "Nunito";
+   font-weight: 300;
+   font-size: 1.2em;
+}
+
+.preferences-input-section input:hover{
+   background-color: #3270DB;
+}
+
+.preferences-input-section input:focus{
+   outline: 0;
+}
+
+.preferences-input-section input:focus:hover{
+   background-color: #4386F8;
+}
+
+.preferences-input-section input::-webkit-input-placeholder{
+   color: #77A9FF;
+   transition-duration: 0.4s;
+}
+
+.preferences-input-section input:hover::-webkit-input-placeholder{
+   transition-duration: 0.4s;
+   color: #A9C8FE;
+}
+
+.preferences-input-section input:focus::-webkit-input-placeholder{
+   color: #4386F8;
+   transition-duration: 0.7s;
 }
