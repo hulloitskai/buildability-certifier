@@ -14,3 +14,4 @@ It is designed to better help Buildability complete client certification wheneve
 - Custom interface to select the Excel columns that contain the necessary information to fill out the certificate.
 - After a set of emails, any email-timeouts due to serverload are recorded; User is prompted if they want to attempt a second send only for the emails that fail.
 - Data-preservation; Backs up Excel files in case of file corruption. Cache is set to 20 files at a time (modifiable via settings), with auto-deletion on oldest file when limit is reached. 
+- Writes to Excel column, inserts 'true' for clients that were emailed successfully.
