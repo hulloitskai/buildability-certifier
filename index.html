@@ -47,7 +47,7 @@
          $("#preferences-button").click(function(){
             showPreferences();
          });
-         $("#preferences-pane .bottom button.save").click(function(){
+         $(".preferences-pane .bottom button.save").click(function(){
             if (preferencesAreValid()){
                savePreferences();
                hidePreferences();
@@ -62,7 +62,7 @@
                loadExcelNames();
             }
          });
-         $("#preferences-pane .bottom button.cancel").click(function(){
+         $(".preferences-pane .bottom button.cancel").click(function(){
             if(confirm("Continue without saving preferences?")){
                hidePreferences();
             }
@@ -85,7 +85,7 @@
             showPreferences();
          });
 
-         $("#preferences-pane .preferences-input-section").bind('submit',function(){
+         $(".preferences-pane .preferences-input-section").bind('submit',function(){
             if (preferencesAreValid()){
                savePreferences();
                hidePreferences();
@@ -215,7 +215,7 @@
 
      <div id= "shadowcover"></div>
 
-     <div id= "preferences-pane">
+     <div class= "preferences-pane main">
         <div class="top">
            <div class="top-inner">
             <p>Settings</p>

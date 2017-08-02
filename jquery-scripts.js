@@ -11,7 +11,7 @@ function showPreferences(){
    },{
       duration: 400,
    });
-   $("#preferences-pane").show().delay(300).animate({
+   $(".preferences-pane").show().delay(300).animate({
       top: '0'
    },{
       easing: 'easeOutElastic',
@@ -20,12 +20,12 @@ function showPreferences(){
          loadPreferences();
       }
    });
-   $("#preferences-pane .body").delay(50).scrollTop(0).
+   $(".preferences-pane .body").delay(50).scrollTop(0).
    preferencePaneActive = true;
 }
 
 function hidePreferences(){
-   $("#preferences-pane").animate({
+   $(".preferences-pane").animate({
       top: '1250'
    },{
       easing: 'easeInCirc',
