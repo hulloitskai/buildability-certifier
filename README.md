@@ -4,6 +4,8 @@ The certifier is an electron-based fully-automatic content-encrypted (unmodifiab
 
 It is designed to better help Buildability complete client certification whenever a large class of clients complete a Buildability training course.
 
+![](https://github.com/steven-xie/buildability-certifier/blob/master/image-showcase/ui-main.png)
+
 ## Features
 - Has a fully-automatic mode and a semi-automatic mode (individual client name selection with autocomplete through Awesomplete).
 - Uses SMTP to send emails through any provider (options available for SMTP host, email username & password).
