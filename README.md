@@ -1,4 +1,4 @@
-# Buildability CERTIFIER
+# Buildability Certifier
 
 The certifier is an electron-based fully-automatic content-encrypted (unmodifiable without password) pdf certificate creator and sender. It loads files from an Excel workbook, and sends out emails in batches. 
 
