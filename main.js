@@ -65,15 +65,28 @@ const dialog = require('electron').dialog
 
 ipc.on('open-file-dialog', function (event) {
   dialog.showOpenDialog({
+        filters: [
+           {name: 'Excel Files', extensions: ['xlsm','xls','xlsx','xlm']}
+        ],
+        properties: ['openFile']
+     }, function (files) {
+       if (files){
+         event.sender.send('selected-directory', files);
+      }
+   });
+});
+
+ipc.on('open-image-dialog', function (event) {
+  dialog.showOpenDialog({
      filters: [
-        {name: 'Excel Files', extensions: ['xlsm','xls','xlsx','xlm']}
+        {name: 'JPG File', extensions: ['jpg', 'png', 'JPG', 'PNG']}
      ],
      properties: ['openFile']
   }, function (files) {
     if (files){
-      event.sender.send('selected-directory', files);
+      event.sender.send('selected-image-directory', files);
    }
-  })
+});
 })
 
 

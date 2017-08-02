@@ -22,12 +22,25 @@
     <!--jquery code-->
     <script>
       $(document).ready(function(){
+
+         fs.readdir('generated-content/', (err, files) => {
+           if (err) throw error;
+
+           for (const file of files) {
+             fs.unlink(path.join('generated-content/', file), err => {
+               if (err) throw error;
+             });
+           }
+         });
+
+         let devMode = false;
+
          awesomplete = new Awesomplete(document.getElementById('name-input-field'));
          awesomplete.list = ["test1","test2","test3"];
          if (process.platform == 'darwin'){
             $("#topbar").attr("id","draggable-topbar");
          };
-         if (appStorage.has('excel-file-directory') && (appStorage.get('excel-file-directory') == "no file selected")){
+         if (checkProgramRunRequirements() == false){
             $("#no-file-selected").show();
             $("div.name-selection").hide();
          }
@@ -42,7 +55,7 @@
                savePreferences();
                hidePreferences();
             }
-            if (appStorage.get('excel-file-directory') == "no file selected"){
+            if (checkProgramRunRequirements() == false){
                $("#no-file-selected").show();
                $("div.name-selection").hide();
             }
@@ -65,11 +78,32 @@
                })
             }
          }});
-         $("#file-select-button").click(function(){
-            openFileSelector();
+         $("#excel-select-button").click(function(){
+            openExcelFileSelector();
+         })
+         $("#certificate-image-select-button").click(function(){
+            openCertificateImageFileSelector();
          })
          $("#no-file-selected button").click(function(){
             showPreferences();
+         });
+
+         $("#preferences-pane .preferences-input-section").bind('submit',function(){
+            if (preferencesAreValid()){
+               savePreferences();
+               hidePreferences();
+            }
+            if (checkProgramRunRequirements() == false){
+               $("#no-file-selected").show();
+               $("div.name-selection").hide();
+            }
+            else{
+               $("#no-file-selected").hide();
+               $("div.name-selection").show();
+               loadExcelNames();
+            }
+
+            return false;
          });
 
          $(".name-selection .top .lowbar form").bind('submit',function(){
@@ -79,6 +113,13 @@
                if (arrayContainsValue(globalNameList, lastClientName)){
                   $(".name-selection .top .lowbar #name-input-field").val('');
                   if (arrayContainsValue(getSelectedClients(), lastClientName) != true){
+                     $(".name-selection .top ol").append("<li>" + lastClientName + "</li>");
+                     if (mainActivityButtonEnabled == false){
+                        $("#buildability-placeholder img").addClass("transparent");
+                        enableMainActionButton();
+                     }
+                  }
+                  else if (devMode == true){
                      $(".name-selection .top ol").append("<li>" + lastClientName + "</li>");
                      if (mainActivityButtonEnabled == false){
                         $("#buildability-placeholder img").addClass("transparent");
@@ -146,8 +187,8 @@
      </header>
      <div id = "content">
         <div id = "no-file-selected">
-           <h1>No file selected!</h1>
-           <p>Seems like there currently isn’t an Excel file selected in preferences.</p>
+           <h1>Incorrect Configuration</h1>
+           <p>Seems like one or more required inputs aren't set in your settings. Maybe check it out?</p>
            <div class="button-wrapper">
              <button>settings</button>
           </div>
@@ -158,13 +199,13 @@
                 <h3>Clients to certify:</h3>
              </div>
              <div id="buildability-placeholder">
-                <img src="./production_assets/images/buildability-logo.png" />
+                <img src="production_assets/images/buildability-logo.png" />
              </div>
              <ol id = "selected-client-names-list">
              </ol>
              <div class = "lowbar">
                 <form>
-                   <input type="text" id="name-input-field" placeholder="Enter client names here."/>
+                   <input autofocus type="text" id="name-input-field" placeholder="Enter client names here."/>
                    <input class = "hidden" type="submit"/>
                 </form>
                 <div class="button-wrapper">
@@ -173,18 +214,18 @@
                 </div>
              </div>
            </div>
-           <div class = "bottom">
-             <button class ="button-disabled">Certify</button>
+           <div class= "bottom">
+             <button class= "button-disabled">Certify</button>
            </div>
         </div>
      </div>
-     <div id="bottombar">
+     <div id= "bottombar">
         <p>buildABILITY</p>
      </div>
 
-     <div id="shadowcover"></div>
+     <div id= "shadowcover"></div>
 
-     <div id="preferences-pane">
+     <div id= "preferences-pane">
         <div class="top">
            <div class="top-inner">
             <p>Settings</p>
@@ -195,22 +236,36 @@
              <tr><td>
                 <h1>Excel File</h1>
                 <p>Select Excel file to use:</p>
-                <table class="content-organizer">
+                <table class= "content-organizer">
                    <tr><td>
-                     <div id = "selected-file-directory">
+                     <div class = "file-selector-info" id= "selected-file-directory">
                         <p>no file selected</p>
                      </div>
                    </td>
                    <td>
-                      <button id="file-select-button">select</button>
+                      <button class="file-select-button" id = "excel-select-button">select</button>
+                   </td></tr>
+                </table>
+             </td></tr>
+             <tr><td>
+                <h1>Certificate Image File</h1>
+                <p>Select Certificate image file to use:</p>
+                <table class= "content-organizer">
+                   <tr><td>
+                     <div class = "file-selector-info" id= "certificate-image-directory">
+                        <p>no file selected</p>
+                     </div>
+                   </td>
+                   <td>
+                      <button class="file-select-button" id= "certificate-image-select-button">select</button>
                    </td></tr>
                 </table>
              </td></tr>
              <tr><td>
                 <h1>Name Column</h1>
                 <p>Select the Excel column containing client names.</p>
-                <form class="dropdown-form" id="name-column-form">
-                   <img src="./production_assets/images/dropdown-arrow.png" />
+                <form class="dropdown-form" id= "name-column-form">
+                   <img src="production_assets/images/dropdown-arrow.png" />
                    <select name="name-column">
                       <option>no file selected</option>
                    </select>
@@ -221,7 +276,7 @@
                 <h1>Email Column</h1>
                 <p>Select the Excel column containing client emails.</p>
                 <form class="dropdown-form" id="email-column-form">
-                   <img src="./production_assets/images/dropdown-arrow.png" />
+                   <img src="production_assets/images/dropdown-arrow.png" />
                    <select name="email-column">
                       <option>no file selected</option>
                    </select>
@@ -232,7 +287,7 @@
                 <h1>Award Column</h1>
                 <p>Select the Excel column containing award name.</p>
                 <form class="dropdown-form" id="award-column-form">
-                   <img src="./production_assets/images/dropdown-arrow.png" />
+                   <img src="production_assets/images/dropdown-arrow.png" />
                    <select name="award-column">
                       <option>no file selected</option>
                    </select>
@@ -269,7 +324,59 @@
                </form>
                <div id="minispacer"></div>
              </td></tr>
+             <tr><td>
+                <h1>Backup Size Limit</h1>
+                <p>Enter the number of Excel files to keep in the backup cache.</p>
+                <form class="preferences-input-section" id="backup-folder-size">
+                   <input type="text" placeholder="25"/>
+               </form>
+               <div id="mediumspacer"></div>
+             </td></tr>
            </table>
+           <table class="emailsection">
+             <tr><td>
+                <h1>SMTP Hostname</h1>
+                <p>The email address that will be used to send certificates with.</p>
+                <form class="preferences-input-section" id="smtp-hostname">
+                   <input type="text" placeholder="smtp.host.com" />
+                </form>
+                <div id="minispacer"></div>
+             </td></tr>
+             <tr><td>
+                <h1>Email Address</h1>
+                <p>The email address (username) that certificates will send from.</p>
+                <form class="preferences-input-section" id="sender-email-username">
+                   <input type="text" placeholder="user@domain.com" />
+                </form>
+                <div id="minispacer"></div>
+             </td></tr>
+             <tr><td>
+                <h1>Account Password</h1>
+                <p>The password for your email account.</p>
+                <form class="preferences-input-section" id="sender-email-password">
+                   <input type="password" placeholder="password" />
+                </form>
+                <div id="minispacer"></div>
+             </td></tr>
+             <tr><td>
+                <h1>Email Send Batch Size</h1>
+                <p>Emails are sent in batches to prevent overloading. Enter email batch size here.</p>
+                <form class="preferences-input-section" id="email-send-delay">
+                   <input type="text" placeholder="Default: 5" />
+                </form>
+                <div id="mediumspacer"></div>
+             </td></tr>
+             <tr><td>
+                <h1>Email Timeout</h1>
+                <p>After a certain amount of time without a server response, an email times out. Enter how long (in seconds) to wait for a 'timeout'.</p>
+                <form class="preferences-input-section" id="email-timeout">
+                   <input type="text" placeholder="Default: 20" />
+                </form>
+                <div id="mediumspacer"></div>
+             </td></tr>
+           </table>
+        </div>
+        <div class="body">
         </div>
         <div class="bottom">
            <table>

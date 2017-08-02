@@ -29,6 +29,8 @@ header .title{
    margin: 0;
    font-size: 2.25em;
    font-weight: 100;
+   -webkit-user-select: none;
+   cursor: default;
 }
 
 #draggable-topbar{
@@ -172,6 +174,10 @@ header .title{
    overflow-y: scroll;
 }
 
+#preferences-pane .body .emailsection{
+   background-color: #375E9F;
+}
+
 #preferences-pane .body h1{
    margin:0;
    font-size: 1.3em;
@@ -211,7 +217,7 @@ header .title{
    max-width: 100px;
 }
 
-#selected-file-directory{
+.file-selector-info{
    white-space: nowrap;
    background-color: #4C81DA;
    border-radius: 13px;
@@ -225,7 +231,7 @@ header .title{
    color: #8CB9FF;
 }
 
-#file-select-button{
+.file-select-button{
    cursor: pointer;
    background-color: #F6F9FF;
    color: #6399F2;
@@ -239,11 +245,11 @@ header .title{
    transition-duration: 0.3s;
 }
 
-#file-select-button:focus{
+.file-select-button:focus{
    outline:0;
 }
 
-#file-select-button:hover{
+.file-select-button:hover{
    background-color: #C1D8FF;
 }
 
@@ -292,6 +298,10 @@ header .title{
    height: 9px;
 }
 
+#mediumspacer{
+   height: 15px;
+}
+
 #no-file-selected{
    border-radius: 15px;
    position: absolute;
@@ -302,7 +312,7 @@ header .title{
    background-color: #78909C;
    font-family: "Open Sans";
    width: 325px;
-   height: 215px;
+   height: 230px;
    box-sizing: border-box;
    padding: 25px 30px;
    display: none;
@@ -434,15 +444,18 @@ div.name-selection .top .topbar{
    font-weight: 500;
    font-size: 1.2em;
    margin: 0;
+   -webkit-user-select: none;
+   cursor: default;
 }
 
 .name-selection .top ol{
    position: absolute;
-   margin: 12px 0px;
+   margin: 12px 0px 0px 13.5px;
    top: 36px;
-   bottom: 29px;
+   bottom: 40px;
    left: 0px; right: 0px;
    overflow-y: scroll;
+   padding-bottom: 7.5px;
 }
 
 .name-selection .top li{
