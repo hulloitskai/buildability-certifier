@@ -5,6 +5,8 @@ var appStorage = new AppStorage();
 
 var preferencePaneActive = false;
 
+var cloudinary = require('cloudinary')
+
 function showPreferences(){
    $("#shadowcover").show().delay(50).animate({
       opacity: '0.6'
@@ -78,14 +80,11 @@ function loadPreferences(){
    if (appStorage.has('certificate-image-directory')){
       $("#certificate-image-directory p").text(appStorage.get('certificate-image-directory'));
    }
-   if (appStorage.has('certificate-image-directory')){
-      $("#certificate-image-directory p").text(appStorage.get('certificate-image-directory'));
+   else{
+      $("#certificate-image-directory p").text("no file selected");
    }
    if (appStorage.has('email-timeout')){
       $("#email-timeout input").val(appStorage.get('email-timeout'));
-   }
-   else{
-      $("#certificate-image-directory p").text("no file selected");
    }
    if(appStorage.has('pdf-encryption-enabled')){
       $("#pdf-encryption-select option").filter(function() {
@@ -391,7 +390,7 @@ function pathlink(staticpath){
 
 function makePDF(name, email, award, identifier){
    console.log("Begin make-pdf for: " + identifier);
-   const pdf = new PDFDocument({
+   let pdf = new PDFDocument({
       autoFirstPage: false
    });
 
@@ -403,7 +402,7 @@ function makePDF(name, email, award, identifier){
    pdf.registerFont('garamond', pathlink('other_assets/pdf-generator-fonts/garamond.ttf'));
    pdf.registerFont('century-gothic', pathlink('./other_assets/pdf-generator-fonts/century-gothic.ttf'));
 
-   let certificateImage = pathlink('other_assets/certificate-template/template-blank.jpg');
+   let certificateImage = pathlink('other_assets/certificate-template/template-blank.png');
    if (appStorage.has('certificate-image-directory') && (appStorage.get('certificate-image-directory') != 'no file selected')){
       certificateImage = appStorage.get('certificate-image-directory');
    }
@@ -436,21 +435,45 @@ function makePDF(name, email, award, identifier){
    pdf.end();
 
    if (appStorage.has('pdf-encryption-enabled') && appStorage.get('pdf-encryption-enabled') == 'true'){
-      qpdf.encrypt(pathlink('generated-content/' + identifier + '.pdf'), {
-         keyLength: 256,
-         password: 'buildabilitysecretkey',
-         restrictions: {
-           modify: 'none',
-           print: 'full',
-           extract: 'n',
-           accessibility: 'y'
-         }
+      cloudinary.config({
+         cloud_name: 'donolcwtb',
+         api_key: '225978731399643',
+         api_secret: 'CTli7yGQyWVj6fS5-MPFZtWHK5Q'
+      });
+
+      cloudinary.v2.uploader.upload(pathlink('generated-content/' + identifier + '.pdf'), { format: 'png' }, (error, result)=>{
+         download(result.url, {
+            directory: pathlink('generated-content/'),
+            filename: identifier + '.png'
+         }, function(err){
+            if (err){
+               console.log(err);
+            }
+            else{
+               fs.unlinkSync(pathlink("generated-content/" + identifier + ".pdf"));
+               pdf = new PDFDocument({
+                  autoFirstPage: false
+               });
+               pdf.pipe(fs.createWriteStream(pathlink("generated-content/" + identifier + ".pdf")));
+               pdf.addPage({
+                layout: "landscape"
+               });
+               pdf.image(pathlink("generated-content/" + identifier + ".png"), 0, 0, {width: 792});
+               pdf.end();
+               fs.unlinkSync(pathlink("generated-content/" + identifier + ".png"));
+               console.log("Done make-pdf for: " + identifier);
+               sendCertificateEmail(name, email, identifier);
+            }
+         });
       });
    }
-
-   console.log("Done make-pdf for: " + identifier);
-   sendCertificateEmail(name, email, identifier);
+   else{
+      console.log("Done make-pdf for: " + identifier);
+      sendCertificateEmail(name, email, identifier);
+   }
 }
+
+const download = require('download-file');
 
 function searchAndRemoveFromArray(array, value){
    var indexOfValue;
@@ -612,7 +635,7 @@ function sendCertificateEmail(clientName, emailAddress, identifier){
          }
       }
 
-      let emailsPerBatch = 5;
+      let emailsPerBatch = 3;
       if(appStorage.has('email-send-delay') && (appStorage.get('email-send-delay') != '')){
          emailsPerBatch = parseInt(appStorage.get('email-send-delay'));
       }
