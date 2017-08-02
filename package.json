@@ -5,7 +5,12 @@
   "description": "Generates and emails certificates to users who have completed Buildability courses.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=production_assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --asar=false --platform=win32 --arch=ia32 --icon=production_assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Buildability Certifier\"",
+    "package-linux": "electron-packager . --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds",
+    "create-installer-mac": "electron-installer-dmg ./release-builds/Buildability\\ Certifier\\ app-darwin-x64/Buildability\\ Certifier\\ .app buildability-certifier --out=release-builds --overwrite --icon=production_assets/icons/mac/icon.icns",
+    "create-installer-win": "node installers/windows/createinstaller.js"
   },
   "repository": "https://github.com/steven-xie/buildability-certifier",
   "keywords": [
@@ -16,6 +21,7 @@
   "devDependencies": {
     "autocomplete": "^0.0.1",
     "electron": "^1.6.2",
+    "electron-installer-dmg": "^0.2.1",
     "electron-packager": "^8.1.0",
     "electron-rebuild": "^1.6.0",
     "electron-winstaller": "^2.6.3"
