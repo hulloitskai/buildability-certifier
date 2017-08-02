@@ -75,7 +75,6 @@ header .title{
 
 .preferences-pane{
    min-height: 425px;
-   height: 70%;
    min-width: 330px;
    width: 70%;
    display: none;
@@ -86,8 +85,11 @@ header .title{
    right: 0;
    bottom: 0;
    margin: auto;
+   height: 70%;
    background-color: #639DFF;
 }
+
+
 
 .preferences-pane .top{
    background-color: #82B1FF;
@@ -169,9 +171,13 @@ header .title{
 }
 
 .preferences-pane .body{
+   position: absolute;
    font-family: "Open Sans";
-   height: inherit;
    overflow-y: scroll;
+   box-sizing: border-box;
+   top: 68.78px;
+   height: auto;
+   bottom: 60.53px;
 }
 
 .preferences-pane .body .emailsection{
@@ -343,37 +349,37 @@ header .title{
    height: 15px;
 }
 
-.preferences-pane .main :-webkit-scrollbar{
+.preferences-pane #mainprefsec::-webkit-scrollbar{
    width: 12px;
    background-color: #314C79;
 }
 
-.preferences-pane .main ::-webkit-scrollbar-thumb{
+.preferences-pane #mainprefsec::-webkit-scrollbar-thumb{
    border-radius: 10px;
    background-color: #8EB9FF;
 }
 
-.preferences-pane .main ::-webkit-scrollbar-track{
+.preferences-pane #mainprefsec::-webkit-scrollbar-track{
    border-radius: 10px;
    background-color: #314C79;
 }
 
-/*
-.file-selector-info ::-webkit-scrollbar{
-   width: 6px;
-   background-color: white;
+
+.content-organizer .file-selector-info::-webkit-scrollbar{
+   height: 0px;
+   background-color: #639DFF;
    opacity: 0;
+   width: 10px;
 }
 
-.file-selector-info ::-webkit-scrollbar-thumb{
-   background-color: #5D92EA;
+.content-organizer .file-selector-info::-webkit-scrollbar-thumb{
+   background-color: #455A7E;
 }
 
-.file-selector-info ::-webkit-scrollbar-track{
-   background-color: white;
+.content-organizer .file-selector-info::-webkit-scrollbar-track{
+   background-color: #639DFF;
    opacity: 0;
 }
-*/
 
 #no-file-selected{
    border-radius: 15px;
@@ -523,12 +529,28 @@ div.name-selection .top .topbar{
 
 .name-selection .top ol{
    position: absolute;
-   margin: 12px 0px 0px 13.5px;
+   margin: 3px 0px 0px 13.5px;
+   padding: 6px 0px 0px 0px;
    top: 36px;
    bottom: 40px;
    left: 0px; right: 0px;
    overflow-y: scroll;
    padding-bottom: 7.5px;
+}
+
+.name-selection .top ol::-webkit-scrollbar{
+   width: 7.5px;
+   background-color: #78909C;
+}
+
+.name-selection .top ol::-webkit-scrollbar-thumb{
+   border-radius: 4px;
+   background-color: #60757F;
+}
+
+.name-selection .top ol::-webkit-scrollbar-track{
+   border-radius: 10px;
+   background-color: #78909C;
 }
 
 .name-selection .top li{
