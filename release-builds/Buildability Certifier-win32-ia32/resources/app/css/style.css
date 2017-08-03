@@ -727,3 +727,63 @@ div.name-selection .top .topbar{
    color: #4386F8;
    transition-duration: 0.7s;
 }
+
+.preferences-textarea-section textarea{
+   width: 100%;
+   height: 200px;
+   border: 0px;
+   border-radius: 2px;
+   margin: 7.5px 0 0 0 ;
+   background-color: #4386F8;
+   color: #C0D9FB;
+   transition-duration: 0.4s;
+   padding: 10px;
+   font-family: "Nunito";
+   font-weight: 300;
+   font-size: 1.2em;
+   overflow-y: scroll;
+   box-sizing: border-box;
+   resize: none;
+}
+
+.preferences-textarea-section textarea:hover{
+   background-color: #3270DB;
+}
+
+.preferences-textarea-section textarea:focus{
+   outline: 0;
+}
+
+.preferences-textarea-section textarea:focus:hover{
+   background-color: #4386F8;
+}
+
+.preferences-textarea-section textarea::-webkit-input-placeholder{
+   color: #77A9FF;
+   transition-duration: 0.4s;
+}
+
+.preferences-textarea-section textarea:hover::-webkit-input-placeholder{
+   transition-duration: 0.4s;
+   color: #A9C8FE;
+}
+
+.preferences-textarea-section textarea:focus::-webkit-input-placeholder{
+   color: #4386F8;
+   transition-duration: 0.7s;
+}
+
+.preferences-textarea-section textarea::-webkit-scrollbar{
+   width: 7.5px;
+   background-color: #4386F8;
+}
+
+.preferences-textarea-section textarea::-webkit-scrollbar-thumb{
+   border-radius: 4px;
+   background-color: #C0D9FB;
+}
+
+.preferences-textarea-section textarea::-webkit-scrollbar-track{
+   border-radius: 10px;
+   background-color: #4386F8;
+}
