@@ -27,7 +27,6 @@
     "electron-winstaller": "^2.6.3"
   },
   "dependencies": {
-    "cloudinary": "^1.9.0",
     "download-file": "^0.1.5",
     "electron-store": "^1.2.0",
     "emailjs": "^1.0.11",
@@ -35,6 +34,7 @@
     "fs": "0.0.1-security",
     "moment": "^2.18.1",
     "path": "^0.12.7",
-    "pdfkit": "^0.8.3"
+    "pdfkit": "^0.8.3",
+    "unirest": "^0.5.1"
   }
 }

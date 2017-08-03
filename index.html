@@ -22,6 +22,7 @@
     <!--jquery code-->
     <script>
       $(document).ready(function(){
+
          fs.readdir(pathlink('generated-content/'), (err, files) => {
            if (err) throw error;
 
@@ -31,6 +32,7 @@
              });
            }
          });
+
 
          awesomplete = new Awesomplete(document.getElementById('name-input-field'));
          awesomplete.list = ["test1","test2","test3"];
@@ -319,7 +321,7 @@
                 <p>Enter the number of Excel files to keep in the backup cache.</p>
                 <form class="preferences-input-section" id="backup-folder-size">
                    <input type="text" placeholder="25"/>
-               </form>
+                </form>
                <div id="mediumspacer"></div>
              </td></tr>
            </table>
@@ -349,6 +351,22 @@
                 <div id="minispacer"></div>
              </td></tr>
              <tr><td>
+                <h1>Email Subject</h1>
+                <p>The subject of the certificate email.</p>
+                <form class="preferences-input-section" id="email-subject">
+                   <input type="text" placeholder="Congratulations on completing your course!" />
+                </form>
+                <div id="minispacer"></div>
+             </td></tr>
+             <tr><td>
+                <h1>Email Body</h1>
+                <p>The body (main content) of the certificate email.</p>
+                <form class="preferences-textarea-section " id="email-content">
+                   <textarea placeholder="Congratulations on completing your course at Buildability. Please find your certificate attached to this email."></textarea>
+                </form>
+                <div id="minispacer"></div>
+             </td></tr>
+             <tr><td>
                 <h1>Email Send Batch Size</h1>
                 <p>Emails are sent in batches to prevent overloading. Enter email batch size here.</p>
                 <form class="preferences-input-section" id="email-send-delay">
@@ -366,7 +384,7 @@
              </td></tr>
              <tr><td>
                 <h1>Prevent Modifications</h1>
-                <p>Allow PDF to be rasterized using an online service, Cloudify.</p>
+                <p>Allow PDF to be rasterized using an online service (PDF2JPG).</p>
                 <form class="dropdown-form-2" id="pdf-encryption-select-form">
                    <img src="production_assets/images/dropdown-arrow.png" />
                    <select id="pdf-encryption-select">

@@ -5,8 +5,6 @@ var appStorage = new AppStorage();
 
 var preferencePaneActive = false;
 
-var cloudinary = require('cloudinary')
-
 function showPreferences(){
    $("#shadowcover").show().delay(50).animate({
       opacity: '0.6'
@@ -62,7 +60,7 @@ function loadPreferences(){
    if (appStorage.has('certificate-input-date')){
       $(".preferences-input-section #date-input-field").val(appStorage.get('certificate-input-date'));
    }
-   if (appStorage.has('email-send-delay')){
+   if (appStorage.has('email-send-delay') && (appStorage.get('email-send-delay') != '3')){
       $("#email-send-delay input").val(appStorage.get('email-send-delay'));
    }
    if (appStorage.has('smtp-hostname')){
@@ -74,7 +72,7 @@ function loadPreferences(){
    if (appStorage.has('sender-email-password')){
       $("#sender-email-password input").val(appStorage.get('sender-email-password'));
    }
-   if (appStorage.has('backup-folder-size')){
+   if (appStorage.has('backup-folder-size') && (appStorage.get('email-send-delay') != '25')){
       $("#backup-folder-size input").val(appStorage.get('backup-folder-size'));
    }
    if (appStorage.has('certificate-image-directory')){
@@ -83,13 +81,19 @@ function loadPreferences(){
    else{
       $("#certificate-image-directory p").text("no file selected");
    }
-   if (appStorage.has('email-timeout')){
+   if (appStorage.has('email-timeout') && (appStorage.get('email-timeout') != '20')){
       $("#email-timeout input").val(appStorage.get('email-timeout'));
    }
    if(appStorage.has('pdf-encryption-enabled')){
       $("#pdf-encryption-select option").filter(function() {
          return $(this).text() === appStorage.get('pdf-encryption-enabled');
       }).prop('selected', true);
+   }
+   if(appStorage.has('email-subject') && (appStorage.get('email-subject') != 'Congratulations on completing your course!')){
+      $("#email-subject input").val(appStorage.get("email-subject"))
+   }
+   if(appStorage.has('email-content') && (appStorage.get('email-content') != 'Congratulations on completing your course at Buildability. Please find your certificate attached to this email.')){
+      $("#email-content textarea").val(appStorage.get("email-content"))
    }
 }
 
@@ -109,6 +113,9 @@ function savePreferences(){
    if($("#email-timeout input").val() != ''){
       appStorage.set('email-timeout', $("#email-timeout input").val());
    }
+   else{
+      appStorage.set('email-timeout', '20');
+   }
    if($("#sender-email-password input").val() != ''){
       appStorage.set('sender-email-password', $("#sender-email-password input").val());
    }
@@ -118,7 +125,24 @@ function savePreferences(){
    if($("#smpt-hostname input").val() != ''){
       appStorage.set('smtp-hostname', $("#smtp-hostname input").val());
    }
-   appStorage.set('backup-folder-size', $("#backup-folder-size input").val());
+   if($("#email-subject input").val() != ''){
+      appStorage.set('email-subject', $("#email-subject input").val());
+   }
+   else{
+      appStorage.set('email-subject', "Congratulations on completing your course!")
+   }
+   if($("#email-content textarea").val() != ''){
+      appStorage.set('email-content', $("#email-content textarea").val());
+   }
+   else{
+      appStorage.set('email-content', "Congratulations on completing your course at Buildability. Please find your certificate attached to this email.");
+   }
+   if($("#backup-folder-size input").val() != ''){
+      appStorage.set('backup-folder-size', $("#backup-folder-size input").val());
+   }
+   else{
+      appStorage.set('backup-folder-size', '25');
+   }
    appStorage.set('certificate-image-directory', $("#certificate-image-directory p").text());
    appStorage.set('pdf-encryption-enabled', $("#pdf-encryption-select").find(":selected").text());
 }
@@ -365,6 +389,10 @@ function emailGrandmaster(){
 
    certificateSpecifications.forEach((specifications, index)=>{
       if (grandmasterLoopCounter <= emailsPerBatch){
+         $(".name-selection .top li").css("transition-duration","1s")
+         $(".name-selection .top li").filter(function(){
+            return $(this).text() === specifications.name;
+         }).css("color","#EACD81");
          makePDF(specifications.name, specifications.email, specifications.award, specifications.identifier);
       }
       grandmasterLoopCounter += 1;
@@ -382,13 +410,13 @@ var statusStage;
 const PDFDocument = require('pdfkit');
 const moment = require('moment');
 const fs = require('fs');
-const qpdf = require('node-qpdf');
 
 function pathlink(staticpath){
    return path.join(__dirname, staticpath);
 }
 
 function makePDF(name, email, award, identifier){
+
    console.log("Begin make-pdf for: " + identifier);
    let pdf = new PDFDocument({
       autoFirstPage: false
@@ -402,21 +430,21 @@ function makePDF(name, email, award, identifier){
    pdf.registerFont('garamond', pathlink('other_assets/pdf-generator-fonts/garamond.ttf'));
    pdf.registerFont('century-gothic', pathlink('./other_assets/pdf-generator-fonts/century-gothic.ttf'));
 
-   let certificateImage = pathlink('other_assets/certificate-template/template-blank.png');
+   let certificateImage = pathlink('other_assets/certificate-template/template-blank.jpg');
    if (appStorage.has('certificate-image-directory') && (appStorage.get('certificate-image-directory') != 'no file selected')){
       certificateImage = appStorage.get('certificate-image-directory');
    }
 
    pdf.image(certificateImage, 0, 0, {width: 792});
-   pdf.font('garamond').fillColor("#414141").fontSize(36).text(name,13,238,{
+   pdf.font('garamond').fillColor("#414141").fontSize(36).text(name,15,238,{
       align: 'center'
    });
-   pdf.fillColor("#414141").fontSize(22).text(award,13,369,{
+   pdf.fillColor("#414141").fontSize(22).text(award,15,369,{
       align: 'center'
    });
 
    const certificateDate = moment(appStorage.get('certificate-input-date'));
-   pdf.fontSize(14).fillColor("#414141").text(certificateDate.format('LL'), -265, 492,{
+   pdf.fontSize(14).fillColor("#414141").text(certificateDate.format('LL'), -262, 492,{
       align: 'center'
    });
 
@@ -427,52 +455,141 @@ function makePDF(name, email, award, identifier){
    });
 
    const fullIdentifier = certificateDate.format("YYYYMMDD") + "-" + identifier;
-   pdf.fillColor("#8C8C8C").text(fullIdentifier,420,589.35,{
+   pdf.fillColor("#8C8C8C").text(fullIdentifier,420,592.35,{
       align: 'left',
       width: 315,
       height: 50
    });
    pdf.end();
 
-   if (appStorage.has('pdf-encryption-enabled') && appStorage.get('pdf-encryption-enabled') == 'true'){
-      cloudinary.config({
-         cloud_name: 'donolcwtb',
-         api_key: '225978731399643',
-         api_secret: 'CTli7yGQyWVj6fS5-MPFZtWHK5Q'
-      });
-
-      cloudinary.v2.uploader.upload(pathlink('generated-content/' + identifier + '.pdf'), { format: 'png' }, (error, result)=>{
-         download(result.url, {
-            directory: pathlink('generated-content/'),
-            filename: identifier + '.png'
-         }, function(err){
-            if (err){
-               console.log(err);
+   setTimeout(function(){
+      if (appStorage.has('pdf-encryption-enabled') && appStorage.get('pdf-encryption-enabled') == 'true'){
+         const file = fs.readFileSync(pathlink('generated-content/' + identifier + '.pdf'));
+         const encodedFile = Buffer(file).toString('base64');
+         let apikey = "72d4d139d5fa46075770730733d738ba";
+         if (appStorage.has('converter-apikey-index')){
+            apikey = listOfConverterAPIs[appStorage.get('converter-apikey-index')];
+         }
+         unirest.post("https://api.convertio.co/convert").headers({'Content-Type': 'application/json'}).send({
+         'apikey': apikey,
+         'filename': identifier + '.pdf',
+         'input': 'base64',
+         'file': encodedFile,
+         'outputformat': 'png'
+         }).end((response) => {
+            if (response.body.status == "ok"){
+               $(".name-selection .top li").css("transition-duration","1s")
+               $(".name-selection .top li").filter(function(){
+                  return $(this).text() === name;
+               }).css("color","#F8FF16");
+               receiveUploadedFile(response.body.data.id, name, email, identifier);
             }
             else{
-               fs.unlinkSync(pathlink("generated-content/" + identifier + ".pdf"));
-               pdf = new PDFDocument({
-                  autoFirstPage: false
-               });
-               pdf.pipe(fs.createWriteStream(pathlink("generated-content/" + identifier + ".pdf")));
-               pdf.addPage({
-                layout: "landscape"
-               });
-               pdf.image(pathlink("generated-content/" + identifier + ".png"), 0, 0, {width: 792});
-               pdf.end();
-               fs.unlinkSync(pathlink("generated-content/" + identifier + ".png"));
-               console.log("Done make-pdf for: " + identifier);
-               sendCertificateEmail(name, email, identifier);
+               if (response.body.error == "No convertion minutes left"){
+                  console.log("Ran out of minutes. Cycling through API keys now.")
+                  let indexVal;
+                  if (appStorage.has('converter-apikey-index')){
+                     indexVal = appStorage.get('converter-apikey-index');
+                     let maxIndex = listOfConverterAPIs.length - 1;
+                     indexVal += 1;
+                     if (indexVal > maxIndex){
+                        indexVal = 0;
+                     }
+                  }
+                  else{
+                     indexVal = 1;
+                  }
+                  console.log("API keys changed. Retrying.")
+                  appStorage.set('converter-apikey-index', indexVal);
+
+                  apikey = listOfConverterAPIs[indexVal];
+                  unirest.post("https://api.convertio.co/convert").headers({'Content-Type': 'application/json'}).send({
+                     'apikey': apikey,
+                     'filename': identifier + '.pdf',
+                     'input': 'base64',
+                     'file': encodedFile,
+                     'outputformat': 'png'
+                  }).end((response)=>{
+                     if (response.body.status == "ok"){
+                        $(".name-selection .top li").css("transition-duration","1s")
+                        $(".name-selection .top li").filter(function(){
+                           return $(this).text() === name;
+                        }).css("color","#F8FF16");
+                        receiveUploadedFile(response.body.data.id, name, email, identifier);
+                     }
+                     else if (response.body.error == "No convertion minutes left"){
+                        alert("Converter error occurred: ran out of free conversion minutes. Contact the developer to add more.")
+                        console.log("Converter error: Ran out of free API keys.");
+                     }
+                     else{
+                        alert("Converter error occurred. Contact the developer.")
+                        console.log("Something's wrong with the converter POST:\n" + JSON.stringify(response.body));
+                     }
+                  });
+
+               }
+               else{
+                  alert("Converter error occurred. Contact the developer.")
+                  console.log("Something's wrong with the converter POST:\n" + JSON.stringify(response.body));
+               }
             }
          });
-      });
-   }
-   else{
-      console.log("Done make-pdf for: " + identifier);
-      sendCertificateEmail(name, email, identifier);
-   }
+      }
+      else{
+         console.log("Done make-pdf for: " + identifier);
+         setTimeout(function(){
+            sendCertificateEmail(name, email, identifier);
+         }, 250);
+      }
+   }, 250);
 }
 
+function receiveUploadedFile(fileid, name, email, identifier){
+   unirest.get("http://api.convertio.co/convert/" + fileid + "/status").end((response)=>{
+      console.log(JSON.stringify(response.body));
+      if (response.body.status == "ok"){
+         if (response.body.data.step == "finish"){
+            console.log("It's done, mate.")
+            const outputURL = response.body.data.output.url;
+            download(outputURL, {
+               directory: pathlink('generated-content/'),
+               filename: identifier + '.png',
+               density: 100,
+               quality: 100
+            }, function(err){
+               if (err){
+                  console.log(err);
+               }
+               else{
+                  fs.unlinkSync(pathlink("generated-content/" + identifier + ".pdf"));
+                  pdf = new PDFDocument({
+                     autoFirstPage: false
+                  });
+                  pdf.pipe(fs.createWriteStream(pathlink("generated-content/" + identifier + ".pdf")));
+                  pdf.addPage({
+                   layout: "landscape"
+                  });
+                  pdf.image(pathlink("generated-content/" + identifier + ".png"), 0, 0, {width: 792});
+                  pdf.end();
+                  fs.unlinkSync(pathlink("generated-content/" + identifier + ".png"));
+                  console.log("Done make-pdf for: " + identifier);
+                  setTimeout(function(){
+                     sendCertificateEmail(name, email, identifier);
+                  }, 250);
+               }
+            });
+         }
+         else if (response.body.data.step == "convert"){
+            console.log("No dice, asking again soon.")
+            setTimeout(function(){
+               receiveUploadedFile(fileid, name, email, identifier)
+            }, 500);
+         }
+      }
+   });
+}
+
+var unirest = require('unirest');
 const download = require('download-file');
 
 function searchAndRemoveFromArray(array, value){
@@ -504,6 +621,7 @@ function arrayContainsValue(array, value){
    return arrayDoesIndeedContainTheAforementionedValue;
 }
 
+var listOfConverterAPIs = ["72d4d139d5fa46075770730733d738ba", "3f1e4cfe94c2b95d35fd6ab72f63ef5e", "8b78e397e89a1d409a4f2ba6647479a1", "55883bcab4cff65422c9530fd079e133", "e3d21f7966a8b38ceb8e33a7ce407f51", "3a2da90b038ae13f7406eccb090ff540"];
 var clientsThatErroredOut;
 
 emailjs = require('emailjs');
@@ -526,14 +644,23 @@ function sendCertificateEmail(clientName, emailAddress, identifier){
       timeout: emailTimeout
    });
 
+   let messageSubject = "Congratulations on completing your course!";
+   let messageContent = "Congratulations on completing your course at Buildability. Please find your certificate attached to this email."
+   if (appStorage.has('email-subject')){
+      messageSubject = appStorage.get('email-subject');
+   }
+   if (appStorage.has('email-content')){
+      messageContent = appStorage.get('email-content');
+   }
+
    var message	= {
       from: "<" + appStorage.get('sender-email-username') + ">",
       to: clientName + " <" + emailAddress + ">",
-      subject:	"Congratulations on completing your course at Buildability!",
-      text: "Congratulations on completing your course at buildability. \nPlease find your certificate attached to this email.",
+      subject: messageSubject,
+      text: messageContent,
       attachment:
       [
-         {data:"<html><h3>Congratulations!</h3><br /><p>Please find your certificate attached to this email.</p></html>", alternative:true},
+         /*{data:"<html><h3>Congratulations!</h3><br /><p>Please find your certificate attached to this email.</p></html>", alternative:true},*/
          {path: pathlink("generated-content/" + identifier + ".pdf"), type:"application/pdf", name: identifier +".pdf"}
       ]
    }
