@@ -107,37 +107,37 @@ function savePreferences(){
    if($(".preferences-input-section #date-input-field").val() != ''){
       appStorage.set('certificate-input-date', $(".preferences-input-section #date-input-field").val());
    }
-   if($("#email-send-delay input").val() != ''){
+   if($("#email-send-delay input").val() !== ''){
       appStorage.set('email-send-delay', $("#email-send-delay input").val());
    }
-   if($("#email-timeout input").val() != ''){
+   if($("#email-timeout input").val() !== ''){
       appStorage.set('email-timeout', $("#email-timeout input").val());
    }
    else{
       appStorage.set('email-timeout', '20');
    }
-   if($("#sender-email-password input").val() != ''){
+   if($("#sender-email-password input").val() !== ''){
       appStorage.set('sender-email-password', $("#sender-email-password input").val());
    }
-   if($("#sender-email-username input").val() != ''){
+   if($("#sender-email-username input").val() !== ''){
       appStorage.set('sender-email-username', $("#sender-email-username input").val());
    }
-   if($("#smpt-hostname input").val() != ''){
+   if($("#smpt-hostname input").val() !== ''){
       appStorage.set('smtp-hostname', $("#smtp-hostname input").val());
    }
-   if($("#email-subject input").val() != ''){
+   if($("#email-subject input").val() !== ''){
       appStorage.set('email-subject', $("#email-subject input").val());
    }
    else{
       appStorage.set('email-subject', "Congratulations on completing your course!")
    }
-   if($("#email-content textarea").val() != ''){
+   if($("#email-content textarea").val() !== ''){
       appStorage.set('email-content', $("#email-content textarea").val());
    }
    else{
       appStorage.set('email-content', "Congratulations on completing your course at Buildability. Please find your certificate attached to this email.");
    }
-   if($("#backup-folder-size input").val() != ''){
+   if($("#backup-folder-size input").val() !== ''){
       appStorage.set('backup-folder-size', $("#backup-folder-size input").val());
    }
    else{
@@ -463,7 +463,6 @@ function makePDF(name, email, award, identifier){
    pdf.end();
 
    setTimeout(function(){
-      alert("STOP, WAIT A MINUTE");
       if (appStorage.has('pdf-encryption-enabled') && appStorage.get('pdf-encryption-enabled') == 'true'){
          const file = fs.readFileSync(pathlink('generated-content/' + identifier + '.pdf'));
          const encodedFile = Buffer(file).toString('base64');
