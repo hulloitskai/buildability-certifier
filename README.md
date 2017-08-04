@@ -17,3 +17,6 @@ It is designed to better help Buildability complete client certification wheneve
 - After a set of emails, any email-timeouts due to serverload are recorded; User is prompted if they want to attempt a second send only for the emails that fail.
 - Data-preservation; Backs up Excel files in case of file corruption. Cache is set to 20 files at a time (modifiable via settings), with auto-deletion on oldest file when limit is reached. 
 - Writes to Excel column, inserts 'true' for clients that were emailed successfully.
+
+### Releases
+You can [download the latest Windows release of the app here](https://github.com/steven-xie/buildability-certifier/releases), although it won't do you a whole of good if you're not a employee at [Buildability](http://www.buildability.ca);
