@@ -436,19 +436,19 @@ function makePDF(name, email, award, identifier){
    }
 
    pdf.image(certificateImage, 0, 0, {width: 792});
-   pdf.font('garamond').fillColor("#414141").fontSize(36).text(name,15,238,{
+   pdf.font('garamond').fillColor("#414141").fontSize(36).text(name,18,265,{
       align: 'center'
    });
-   pdf.fillColor("#414141").fontSize(22).text(award,15,369,{
+   pdf.fillColor("#414141").fontSize(22).text(award,15,372,{
       align: 'center'
    });
 
    const certificateDate = moment(appStorage.get('certificate-input-date'));
-   pdf.fontSize(14).fillColor("#414141").text(certificateDate.format('LL'), -262, 492,{
+   pdf.fontSize(14).fillColor("#414141").text(certificateDate.format('LL'), -258, 500,{
       align: 'center'
    });
 
-   pdf.font('century-gothic').fillColor("#8C8C8C").fontSize(9).text("",0,589.35,{
+   pdf.font('century-gothic').fillColor("#8C8C8C").fontSize(9).text("",0,586,{
       align: 'right',
       width: 315,
       height: 50
@@ -463,6 +463,7 @@ function makePDF(name, email, award, identifier){
    pdf.end();
 
    setTimeout(function(){
+      alert("STOP, WAIT A MINUTE");
       if (appStorage.has('pdf-encryption-enabled') && appStorage.get('pdf-encryption-enabled') == 'true'){
          const file = fs.readFileSync(pathlink('generated-content/' + identifier + '.pdf'));
          const encodedFile = Buffer(file).toString('base64');
