@@ -36,5 +36,8 @@
     "path": "^0.12.7",
     "pdfkit": "^0.8.3",
     "unirest": "^0.5.1"
+  },
+  "jshintConfig":{
+    "esversion": 6
   }
 }
