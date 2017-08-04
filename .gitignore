@@ -46,3 +46,4 @@ jspm_packages
 # Yarn Integrity file
 .yarn-integrity
 
+release-builds/Buildability Certifier-win32-ia32/resources/app/.DS_Store
