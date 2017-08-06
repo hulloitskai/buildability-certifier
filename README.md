@@ -25,4 +25,4 @@ It is designed to better help Buildability complete client certification wheneve
 - Option to rasterize PDFs to lock editing capabilities.
 
 ### Releases
-You can [download the latest Windows release of the app here](https://github.com/steven-xie/buildability-certifier/releases), although it won't do you a whole of good if you're not a employee at [Buildability](http://www.buildability.ca);
+You can [download the latest Windows release of the app here](https://github.com/steven-xie/buildability-certifier/releases), although it won't do you a whole of good if you're not an employee at [Buildability](http://www.buildability.ca).
