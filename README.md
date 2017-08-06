@@ -6,6 +6,10 @@ It is designed to better help Buildability complete client certification wheneve
 
 ![](https://github.com/steven-xie/buildability-certifier/blob/master/image-showcase/ui-main.png)
 
+### More Previews:
+- [A video showcasing the UI](https://www.youtube.com/watch?v=53A7nspEz6U)
+- [Image of the final certificate](https://github.com/steven-xie/buildability-certifier/blob/master/image-showcase/certificate-sent.png)
+
 ## Features
 - Has a fully-automatic mode and a semi-automatic mode (individual client name selection with autocomplete through Awesomplete).
 - Uses SMTP to send emails through any provider (options available for SMTP host, email username & password).
@@ -17,6 +21,8 @@ It is designed to better help Buildability complete client certification wheneve
 - After a set of emails, any email-timeouts due to serverload are recorded; User is prompted if they want to attempt a second send only for the emails that fail.
 - Data-preservation; Backs up Excel files in case of file corruption. Cache is set to 20 files at a time (modifiable via settings), with auto-deletion on oldest file when limit is reached. 
 - Writes to Excel column, inserts 'true' for clients that were emailed successfully.
+- Custom email subject and body fields.
+- Option to rasterize PDFs to lock editing capabilities.
 
 ### Releases
 You can [download the latest Windows release of the app here](https://github.com/steven-xie/buildability-certifier/releases), although it won't do you a whole of good if you're not a employee at [Buildability](http://www.buildability.ca);
