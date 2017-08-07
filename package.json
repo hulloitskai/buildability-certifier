@@ -17,7 +17,7 @@
     "Buildability"
   ],
   "author": "Steven Xie",
-  "license": "MIT License",
+  "license": "CC-BY-NC-4.0",
   "devDependencies": {
     "autocomplete": "^0.0.1",
     "electron": "^1.6.2",
