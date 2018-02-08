@@ -22,15 +22,17 @@
     <!--jquery code-->
     <script>
       $(document).ready(function(){
+        /*
          fs.readdir(pathlink('generated-content/'), (err, files) => {
-           if (err) throw error;
+           if (err) throw err;
 
            for (const file of files) {
              fs.unlink(path.join(pathlink('generated-content/'), file), err => {
-               if (err) throw error;
+               if (err) throw err;
              });
            }
          });
+         */
 
 
          awesomplete = new Awesomplete(document.getElementById('name-input-field'));

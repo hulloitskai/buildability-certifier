@@ -2,7 +2,345 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66f61122-b433-4539-b914-bfa930664a01" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/jquery-scripts.js" afterPath="$PROJECT_DIR$/jquery-scripts.js" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Buildability Certifier Helper EH.app/Contents/Info.plist" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Buildability Certifier Helper EH.app/Contents/Info.plist" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Buildability Certifier Helper EH.app/Contents/MacOS/Buildability Certifier Helper EH" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Buildability Certifier Helper EH.app/Contents/MacOS/Buildability Certifier Helper EH" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Buildability Certifier Helper NP.app/Contents/Info.plist" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Buildability Certifier Helper NP.app/Contents/Info.plist" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Buildability Certifier Helper NP.app/Contents/MacOS/Buildability Certifier Helper NP" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Buildability Certifier Helper NP.app/Contents/MacOS/Buildability Certifier Helper NP" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Buildability Certifier Helper.app/Contents/Info.plist" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Buildability Certifier Helper.app/Contents/Info.plist" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Buildability Certifier Helper.app/Contents/MacOS/Buildability Certifier Helper" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Buildability Certifier Helper.app/Contents/MacOS/Buildability Certifier Helper" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libnode.dylib" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libnode.dylib" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/Info.plist" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/Info.plist" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/am.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/am.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ar.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ar.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bg.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bg.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bn.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/bn.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ca.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ca.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/content_shell.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/content_shell.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/crashpad_handler" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/crashpad_handler" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/cs.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/cs.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/da.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/da.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/de.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/de.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/el.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/el.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/en_GB.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_419.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/es_419.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/et.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/et.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fa.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fa.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fi.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fi.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fil.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fil.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fr.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/fr.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/gu.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/gu.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/he.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/he.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hi.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hi.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hr.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hr.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hu.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/hu.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/icudtl.dat" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/icudtl.dat" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/id.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/id.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/it.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/it.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ja.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ja.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/kn.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/kn.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ko.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ko.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lt.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lt.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lv.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/lv.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ml.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ml.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/mr.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/mr.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ms.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ms.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/natives_blob.bin" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/natives_blob.bin" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nb.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nb.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nl.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/nl.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pdf_viewer_resources.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pdf_viewer_resources.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pl.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pl.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_BR.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_BR.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_PT.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/pt_PT.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ro.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ro.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ru.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ru.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sk.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sk.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sl.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sl.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/snapshot_blob.bin" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/snapshot_blob.bin" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sr.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sr.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sv.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sv.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sw.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/sw.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ta.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/ta.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/te.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/te.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/th.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/th.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/tr.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/tr.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/uk.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/uk.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/vi.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/vi.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_CN.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_TW.lproj/locale.pak" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Resources/zh_TW.lproj/locale.pak" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Squirrel.framework/Versions/A/Resources/Info.plist" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Squirrel.framework/Versions/A/Resources/Info.plist" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Squirrel.framework/Versions/A/Resources/ShipIt" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Squirrel.framework/Versions/A/Resources/ShipIt" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Squirrel.framework/Versions/A/Squirrel" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Frameworks/Squirrel.framework/Versions/A/Squirrel" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Info.plist" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Info.plist" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/MacOS/Buildability Certifier" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/MacOS/Buildability Certifier" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/.gitattributes" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/awesomplete/awesomplete.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/awesomplete/awesomplete.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/excelplus.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/jquery-easing.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/jquery-rotate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/jquery-ui.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/swfobject/FileToDataURI.mxml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/swfobject/FileToDataURI.swf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/swfobject/expressInstall.swf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/swfobject/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/swfobject/index_dynamic.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/swfobject/src/expressInstall.as" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/swfobject/src/expressInstall.fla" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/swfobject/src/swfobject.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/swfobject/swfobject.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/dependencies/swfobject/test.swf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/jquery-scripts.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/main.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/other_assets/certificate-template/pdf-form.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/other_assets/certificate-template/pdf-template.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/other_assets/certificate-template/template-blank.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/other_assets/certificate-template/template-blank.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/other_assets/pdf-generator-fonts/century-gothic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/other_assets/pdf-generator-fonts/garamond.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/icons/mac/icon.icns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/icons/png/1024x1024.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/icons/png/128x128.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/icons/png/16x16.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/icons/png/24x24.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/icons/png/256x256.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/icons/png/32x32.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/icons/png/48x48.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/icons/png/512x512.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/icons/png/64x64.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/icons/png/96x96.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/icons/win/1024x1024.png.ico" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/images/buildability-logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/images/dropdown-arrow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/production_assets/images/pref-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/sketch-assets/colors/color-designs.sketch" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/sketch-assets/icon/buildability-certifier-icon.sketch" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/sketch-assets/icon/icon-main.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/sketch-assets/mockups/buildability-certifier-mockup.sketch" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/1.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/10.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/11.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/12.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/13.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/14.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/15.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/16.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/17.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/18.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/19.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/2.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/20.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/21.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/3.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/4.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/5.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/6.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/7.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/8.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/userdata-backups/9.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/electron.asar" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/electron.asar" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/LICENSES.chromium.html" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/LICENSES.chromium.html" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/version" afterPath="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/version" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/Buildability Certifier.exe" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/LICENSES.chromium.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/Update.exe" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/blink_image_resources_200_percent.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/content_resources_200_percent.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/content_shell.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/d3dcompiler_47.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/ffmpeg.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/icudtl.dat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/libEGL.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/libGLESv2.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/am.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/ar.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/bg.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/bn.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/ca.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/cs.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/da.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/de.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/el.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/en-GB.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/en-US.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/es-419.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/es.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/et.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/fa.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/fake-bidi.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/fi.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/fil.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/fr.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/gu.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/he.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/hi.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/hr.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/hu.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/id.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/it.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/ja.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/kn.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/ko.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/lt.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/lv.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/ml.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/mr.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/ms.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/nb.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/nl.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/pl.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/pt-BR.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/pt-PT.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/ro.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/ru.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/sk.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/sl.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/sr.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/sv.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/sw.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/ta.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/te.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/th.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/tr.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/uk.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/vi.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/zh-CN.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/locales/zh-TW.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/natives_blob.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/node.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/pdf_viewer_resources.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/.gitattributes" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/.idea/buildability-certifier.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/awesomplete/awesomplete.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/awesomplete/awesomplete.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/excelplus.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/jquery-easing.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/jquery-rotate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/jquery-ui.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/swfobject/FileToDataURI.mxml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/swfobject/FileToDataURI.swf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/swfobject/expressInstall.swf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/swfobject/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/swfobject/index_dynamic.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/swfobject/src/expressInstall.as" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/swfobject/src/expressInstall.fla" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/swfobject/src/swfobject.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/swfobject/swfobject.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/dependencies/swfobject/test.swf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/image-showcase/certificate-sent.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/image-showcase/email-sent.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/image-showcase/ui-main.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/image-showcase/ui-settings.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/installers/setupEvents.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/installers/windows/createinstaller.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/jquery-scripts.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/main.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/other_assets/certificate-template/pdf-form.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/other_assets/certificate-template/pdf-template.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/other_assets/certificate-template/template-blank.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/other_assets/certificate-template/template-blank.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/other_assets/certificate-template/template-blank.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/other_assets/pdf-generator-fonts/century-gothic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/other_assets/pdf-generator-fonts/garamond.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/icons/mac/icon.icns" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/icons/png/1024x1024.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/icons/png/128x128.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/icons/png/16x16.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/icons/png/24x24.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/icons/png/256x256.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/icons/png/32x32.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/icons/png/48x48.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/icons/png/512x512.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/icons/png/64x64.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/icons/png/96x96.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/icons/win/icon.ico" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/images/buildability-logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/images/dropdown-arrow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/production_assets/images/pref-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/sketch-assets/colors/color-designs.sketch" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/sketch-assets/icon/buildability-certifier-icon.sketch" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/sketch-assets/icon/icon-main.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/sketch-assets/mockups/buildability-certifier-mockup.sketch" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/1.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/10.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/11.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/12.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/13.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/14.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/15.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/16.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/17.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/18.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/19.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/2.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/20.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/21.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/22.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/23.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/24.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/25.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/3.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/4.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/5.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/6.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/7.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/8.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/app/userdata-backups/9.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/resources/electron.asar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/snapshot_blob.bin" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/ui_resources_200_percent.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/version" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/release-builds/Buildability Certifier-win32-ia32/views_resources_200_percent.pak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/1.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/1.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/10.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/10.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/11.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/11.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/12.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/12.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/13.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/13.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/14.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/14.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/15.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/15.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/16.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/16.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/17.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/17.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/18.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/18.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/19.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/19.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/2.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/2.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/20.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/20.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/21.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/21.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/22.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/22.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/23.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/23.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/24.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/24.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/25.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/25.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/3.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/3.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/4.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/4.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/5.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/5.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/6.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/6.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/7.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/7.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/8.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/8.xlsx" />
+      <change beforePath="$PROJECT_DIR$/userdata-backups/9.xlsx" afterPath="$PROJECT_DIR$/userdata-backups/9.xlsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +360,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+            <state relative-caret-position="529">
+              <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -32,8 +370,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            <state relative-caret-position="6095">
+              <caret line="265" column="24" lean-forward="false" selection-start-line="265" selection-start-column="24" selection-end-line="265" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -42,8 +380,32 @@
       <file leaf-file-name="jquery-scripts.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jquery-scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+            <state relative-caret-position="327">
+              <caret line="903" column="0" lean-forward="true" selection-start-line="903" selection-start-column="0" selection-end-line="903" selection-end-column="0" />
+              <folding>
+                <element signature="e#11114#11858#0" expanded="false" />
+                <element signature="e#12451#13869#0" expanded="false" />
+                <element signature="e#25325#26984#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="document.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/pdfkit/js/document.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2047">
+              <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="images.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/pdfkit/js/mixins/images.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1426">
+              <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -52,8 +414,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="35" column="12" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+            <state relative-caret-position="166">
+              <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -65,6 +427,18 @@
     <findStrings>
       <find>require</find>
       <find>electron-store</find>
+      <find>hint</find>
+      <find>email</find>
+      <find>certify</find>
+      <find>makePDF</find>
+      <find>message</find>
+      <find>pdfkit</find>
+      <find>generated-content</find>
+      <find>err</find>
+      <find>image</find>
+      <find>pdf</find>
+      <find>fs.e</find>
+      <find>backup</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -77,9 +451,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.jshintrc" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/jquery-scripts.js" />
       </list>
     </option>
@@ -106,7 +480,6 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
-    <handled-path value="$PROJECT_DIR$/release-builds/Buildability Certifier-darwin-x64/Buildability Certifier.app/Contents/Resources/app/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
@@ -151,8 +524,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,12 +540,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
-    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="javascript.nodejs.core.library.configured.version" value="6.11.1" />
@@ -191,14 +563,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -256,6 +620,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -274,11 +646,13 @@
       <workItem from="1501847884984" duration="987000" />
       <workItem from="1501848926552" duration="2285000" />
       <workItem from="1501878229340" duration="48000" />
+      <workItem from="1518096744777" duration="5349000" />
+      <workItem from="1518106897496" duration="243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4105000" />
+    <option name="totallyTimeSpent" value="9697000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -290,16 +664,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="948" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="948" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17559524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17540687" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3282532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -307,9 +683,29 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17540687" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -322,6 +718,94 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6095">
+          <caret line="265" column="24" lean-forward="false" selection-start-line="265" selection-start-column="24" selection-end-line="265" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery-scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9085">
+          <caret line="442" column="3" lean-forward="false" selection-start-line="442" selection-start-column="3" selection-end-line="442" selection-end-column="3" />
+          <folding>
+            <element signature="e#11114#11858#0" expanded="false" />
+            <element signature="e#12451#13869#0" expanded="false" />
+            <element signature="e#25325#26984#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/pdfkit/js/document.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2047">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/pdfkit/js/mixins/images.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1426">
+          <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="72" lean-forward="true" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="35" column="12" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery-scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding>
+            <element signature="e#11114#11858#0" expanded="false" />
+            <element signature="e#12451#13869#0" expanded="false" />
+            <element signature="e#25325#26984#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -362,35 +846,55 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.jshintrc" />
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="35" column="12" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+        <state relative-caret-position="6095">
+          <caret line="265" column="24" lean-forward="false" selection-start-line="265" selection-start-column="24" selection-end-line="265" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/pdfkit/js/mixins/images.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1426">
+          <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/pdfkit/js/document.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2047">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="49" lean-forward="false" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        <state relative-caret-position="529">
+          <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        <state relative-caret-position="166">
+          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jquery-scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="327">
+          <caret line="903" column="0" lean-forward="true" selection-start-line="903" selection-start-column="0" selection-end-line="903" selection-end-column="0" />
+          <folding>
+            <element signature="e#11114#11858#0" expanded="false" />
+            <element signature="e#12451#13869#0" expanded="false" />
+            <element signature="e#25325#26984#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

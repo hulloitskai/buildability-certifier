@@ -46,4 +46,12 @@ jspm_packages
 # Yarn Integrity file
 .yarn-integrity
 
-release-builds/Buildability Certifier-win32-ia32/resources/app/.DS_Store
+# Ignore DS_Store
+.DS_Store
+
+# Ignore IntelliJ and its project files
+out/
+.idea/
+*.iml
+*.ipr
+*.iws
